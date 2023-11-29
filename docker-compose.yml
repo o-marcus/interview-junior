@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: postgres-hero
+    image: postgres:12
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: gubee
+      POSTGRES_PASSWORD: gubee
+      PGDATA: /data/postgres
+    volumes:
+      - ./postgres-hero:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: always
