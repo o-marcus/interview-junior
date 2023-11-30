@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.util.StringUtils;
@@ -11,6 +12,7 @@ import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.ResourceAccessException;
@@ -26,7 +28,6 @@ import static org.springframework.http.ResponseEntity.status;
 @RestControllerAdvice
 @RequiredArgsConstructor
 public class ExceptionAdvice {
-
 
     @ExceptionHandler(value = {Exception.class})
     ResponseEntity<Object> handleGeneralException(Exception e) {
@@ -92,4 +93,12 @@ public class ExceptionAdvice {
         log.error(e.getMessage(), e);
         return status(BAD_GATEWAY).body("message.integration.connection.refused");
     }
+
+    @ExceptionHandler({NotFoundException.class})
+    @ResponseStatus(NOT_FOUND)
+    ResponseEntity<Object> handleNotFoundException(NotFoundException e) {
+        log.warn(e.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+    }
+
 }

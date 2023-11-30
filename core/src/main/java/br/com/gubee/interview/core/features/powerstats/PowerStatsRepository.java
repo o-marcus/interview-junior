@@ -1,5 +1,6 @@
 package br.com.gubee.interview.core.features.powerstats;
 
+import br.com.gubee.interview.model.Hero;
 import br.com.gubee.interview.model.PowerStats;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
@@ -24,4 +25,9 @@ public class PowerStatsRepository {
             new BeanPropertySqlParameterSource(powerStats),
             UUID.class);
     }
+
+    public PowerStats findById(UUID id) {
+        return null;
+    }
+
 }

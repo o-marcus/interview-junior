@@ -1,16 +1,14 @@
-package br.com.gubee.interview.model.request;
+package br.com.gubee.interview.model.dto.powerstats;
 
-import br.com.gubee.interview.model.enums.Race;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.time.Instant;
 
 import static lombok.AccessLevel.PRIVATE;
 
@@ -18,14 +16,7 @@ import static lombok.AccessLevel.PRIVATE;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(access = PRIVATE)
-public class CreateHeroRequest {
-
-    @NotBlank(message = "message.name.mandatory")
-    @Length(min = 1, max = 255, message = "message.name.length")
-    private String name;
-
-    @NotNull(message = "message.race.mandatory")
-    private Race race;
+public class PowerStatsRequest {
 
     @Min(value = 0, message = "message.powerstats.strength.min")
     @Max(value = 10, message = "message.powerstats.strength.max")
@@ -46,4 +37,8 @@ public class CreateHeroRequest {
     @Max(value = 10, message = "message.powerstats.intelligence.max")
     @NotNull(message = "message.powerstats.intelligence.mandatory")
     private int intelligence;
+
+    private Instant createdAt = Instant.now();
+
+    private Instant updatedAt = Instant.now();
 }
