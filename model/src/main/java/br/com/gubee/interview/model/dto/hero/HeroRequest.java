@@ -24,10 +24,8 @@ public class HeroRequest {
     @NotBlank(message = "message.name.mandatory")
     @Length(min = 1, max = 255, message = "message.name.length")
     private String name;
-
     @NotNull(message = "message.race.mandatory")
     private Race race;
-
     @NotNull(message = "message.stats.mandatory")
     private UUID stats;
 }

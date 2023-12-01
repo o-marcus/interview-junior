@@ -2,7 +2,6 @@ package br.com.gubee.interview.core.features.compareheroes;
 
 import br.com.gubee.interview.core.features.hero.HeroRepository;
 import br.com.gubee.interview.model.dto.compareheroes.CompareResponse;
-import br.com.gubee.interview.model.dto.hero.HeroResponse;
 import br.com.gubee.interview.model.dto.hero.JoinHeroPowerStatsByHeroNameResponse;
 import br.com.gubee.interview.model.dto.powerstats.PowerStatsResponse;
 import lombok.RequiredArgsConstructor;
