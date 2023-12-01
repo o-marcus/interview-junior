@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class HeroService {
 
-    private final IHeroRepository repository;
+    private final HeroRepository repository;
     @Transactional
     public UUID create(HeroRequest heroDto) {
         return repository.create(new Hero(heroDto));

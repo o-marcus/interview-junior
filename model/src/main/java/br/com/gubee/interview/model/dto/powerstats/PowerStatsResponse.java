@@ -1,9 +1,15 @@
 package br.com.gubee.interview.model.dto.powerstats;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import static lombok.AccessLevel.PRIVATE;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor(access = PRIVATE)
 public class PowerStatsResponse {
     private int strength;
     private int agility;

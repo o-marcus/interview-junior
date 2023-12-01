@@ -21,7 +21,6 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @NoArgsConstructor(access = PRIVATE)
 public class HeroRequest {
-
     @NotBlank(message = "message.name.mandatory")
     @Length(min = 1, max = 255, message = "message.name.length")
     private String name;
@@ -31,5 +30,4 @@ public class HeroRequest {
 
     @NotNull(message = "message.stats.mandatory")
     private UUID stats;
-
 }
