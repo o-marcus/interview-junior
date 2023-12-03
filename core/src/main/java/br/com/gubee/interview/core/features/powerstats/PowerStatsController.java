@@ -1,6 +1,6 @@
 package br.com.gubee.interview.core.features.powerstats;
 
-import br.com.gubee.interview.model.dto.powerstats.PowerStatsRequest;
+import br.com.gubee.interview.model.powerstats.dto.PowerStatsRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

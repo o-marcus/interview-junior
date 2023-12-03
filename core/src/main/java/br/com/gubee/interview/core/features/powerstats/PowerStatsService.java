@@ -1,7 +1,7 @@
 package br.com.gubee.interview.core.features.powerstats;
 
-import br.com.gubee.interview.model.PowerStats;
-import br.com.gubee.interview.model.dto.powerstats.PowerStatsRequest;
+import br.com.gubee.interview.model.powerstats.PowerStats;
+import br.com.gubee.interview.model.powerstats.dto.PowerStatsRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,7 +12,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class PowerStatsService {
 
-    private final PowerStatsRepository powerStatsRepository;
+    private final JDBCPowerStatsRepository powerStatsRepository;
 
     @Transactional
     public UUID create(PowerStatsRequest powerStats) {

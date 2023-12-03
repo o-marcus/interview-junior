@@ -107,7 +107,7 @@ java.lang.NullPointerException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
 	at java.lang.Thread.run(Thread.java:833) ~[?:?]
-[WARN ] [2023-11-29T13:30:07,267] [http-nio-8080-exec-2] [ExceptionAdvice] JSON parse error: Cannot construct instance of `br.com.gubee.interview.model.dto.hero.HeroRequest` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('name'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `br.com.gubee.interview.model.dto.hero.HeroRequest` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('name')
+[WARN ] [2023-11-29T13:30:07,267] [http-nio-8080-exec-2] [ExceptionAdvice] JSON parse error: Cannot construct instance of `br.com.gubee.interview.model.hero.dto.HeroRequest` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('name'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `br.com.gubee.interview.model.hero.dto.HeroRequest` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('name')
  at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 5] 
 [ERROR] [2023-11-29T13:30:26,443] [http-nio-8080-exec-3] [ExceptionAdvice] Uncaught exception, message=null 
 java.lang.NullPointerException: null
@@ -3047,11 +3047,11 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required r
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
 	at java.lang.Thread.run(Thread.java:833) ~[?:?]
-[ERROR] [2023-12-01T10:29:00,647] [http-nio-8080-exec-10] [ExceptionAdvice] Uncaught exception, message=Cannot invoke "br.com.gubee.interview.model.dto.powerstats.PowerStatsResponse.getAgility()" because "firstPower" is null 
-java.lang.NullPointerException: Cannot invoke "br.com.gubee.interview.model.dto.powerstats.PowerStatsResponse.getAgility()" because "firstPower" is null
-	at br.com.gubee.interview.core.features.compareheroes.CompareHeroService.subtract(CompareHeroService.java:35) ~[classes/:?]
-	at br.com.gubee.interview.core.features.compareheroes.CompareHeroService.compare(CompareHeroService.java:29) ~[classes/:?]
-	at br.com.gubee.interview.core.features.compareheroes.CompareHeroController.getHeroByID(CompareHeroController.java:18) ~[classes/:?]
+[ERROR] [2023-12-01T10:29:00,647] [http-nio-8080-exec-10] [ExceptionAdvice] Uncaught exception, message=Cannot invoke "br.com.gubee.interview.model.powerstats.dto.PowerStatsResponse.getAgility()" because "firstPower" is null
+java.lang.NullPointerException: Cannot invoke "br.com.gubee.interview.model.powerstats.dto.PowerStatsResponse.getAgility()" because "firstPower" is null
+	at br.com.gubee.interview.core.features.compareheroes.CompareHeroesService.subtract(CompareHeroService.java:35) ~[classes/:?]
+	at br.com.gubee.interview.core.features.compareheroes.CompareHeroesService.compare(CompareHeroService.java:29) ~[classes/:?]
+	at br.com.gubee.interview.core.features.compareheroes.CompareHeroesController.getHeroByID(CompareHeroController.java:18) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -3129,11 +3129,11 @@ java.lang.NullPointerException: Cannot invoke "br.com.gubee.interview.model.dto.
 [INFO ] [2023-12-01T10:30:33,538] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
 [INFO ] [2023-12-01T10:30:33,540] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
 [INFO ] [2023-12-01T10:30:33,546] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 6 ms 
-[ERROR] [2023-12-01T10:31:26,199] [http-nio-8080-exec-2] [ExceptionAdvice] Uncaught exception, message=Cannot invoke "br.com.gubee.interview.model.dto.powerstats.PowerStatsResponse.getAgility()" because "firstPower" is null 
-java.lang.NullPointerException: Cannot invoke "br.com.gubee.interview.model.dto.powerstats.PowerStatsResponse.getAgility()" because "firstPower" is null
-	at br.com.gubee.interview.core.features.compareheroes.CompareHeroService.subtract(CompareHeroService.java:35) ~[classes/:?]
-	at br.com.gubee.interview.core.features.compareheroes.CompareHeroService.compare(CompareHeroService.java:29) ~[classes/:?]
-	at br.com.gubee.interview.core.features.compareheroes.CompareHeroController.getHeroByID(CompareHeroController.java:18) ~[classes/:?]
+[ERROR] [2023-12-01T10:31:26,199] [http-nio-8080-exec-2] [ExceptionAdvice] Uncaught exception, message=Cannot invoke "br.com.gubee.interview.model.powerstats.dto.PowerStatsResponse.getAgility()" because "firstPower" is null
+java.lang.NullPointerException: Cannot invoke "br.com.gubee.interview.model.powerstats.dto.PowerStatsResponse.getAgility()" because "firstPower" is null
+	at br.com.gubee.interview.core.features.compareheroes.CompareHeroesService.subtract(CompareHeroService.java:35) ~[classes/:?]
+	at br.com.gubee.interview.core.features.compareheroes.CompareHeroesService.compare(CompareHeroService.java:29) ~[classes/:?]
+	at br.com.gubee.interview.core.features.compareheroes.CompareHeroesController.getHeroByID(CompareHeroController.java:18) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]

@@ -1,7 +1,7 @@
 package br.com.gubee.interview.core.features.hero;
 
-import br.com.gubee.interview.model.dto.hero.HeroRequest;
-import br.com.gubee.interview.model.dto.hero.HeroResponse;
+import br.com.gubee.interview.model.hero.dto.HeroRequest;
+import br.com.gubee.interview.model.hero.dto.HeroResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -29,9 +29,9 @@ public class HeroController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Object> update(@PathVariable("id") UUID id, @Validated @RequestBody HeroRequest heroDto) {
+    public ResponseEntity<String> update(@PathVariable("id") UUID id, @Validated @RequestBody HeroRequest heroDto) {
         heroService.update(id, heroDto);
-        return ok().body("Updated hero with sucess");
+        return ok().body("updated hero with sucess");
    }
 
     @GetMapping(path = "/{id}")

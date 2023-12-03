@@ -1,7 +1,7 @@
 package br.com.gubee.interview.core.features.hero;
 
-import br.com.gubee.interview.model.Hero;
-import br.com.gubee.interview.model.dto.hero.JoinHeroPowerStatsByHeroNameResponse;
+import br.com.gubee.interview.model.hero.Hero;
+import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
 
 import java.util.List;
 import java.util.UUID;

@@ -1,8 +1,8 @@
 package br.com.gubee.interview.core.features.hero;
 
-import br.com.gubee.interview.model.Hero;
-import br.com.gubee.interview.model.dto.hero.HeroRequest;
-import br.com.gubee.interview.model.dto.hero.HeroResponse;
+import br.com.gubee.interview.model.hero.Hero;
+import br.com.gubee.interview.model.hero.dto.HeroRequest;
+import br.com.gubee.interview.model.hero.dto.HeroResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,8 +34,8 @@ public class HeroService {
                 .collect(Collectors.toList());
     }
 
-    public void update(UUID id, HeroRequest heroDto) {
-        repository.updateHero(id, new Hero(heroDto));
+    public void update(UUID id, HeroRequest request) {
+        repository.updateHero(id, new Hero(request));
     }
 
     public static HeroResponse toHeroResponse(Hero hero) {

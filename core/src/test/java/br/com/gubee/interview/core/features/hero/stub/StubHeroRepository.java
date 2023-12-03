@@ -1,24 +1,23 @@
 package br.com.gubee.interview.core.features.hero.stub;
 
 import br.com.gubee.interview.core.features.hero.HeroRepository;
-import br.com.gubee.interview.model.Hero;
-import br.com.gubee.interview.model.PowerStats;
-import br.com.gubee.interview.model.dto.hero.JoinHeroPowerStatsByHeroNameResponse;
-
+import br.com.gubee.interview.core.features.powerstats.stub.StubPowerStatsRepository;
+import br.com.gubee.interview.model.hero.Hero;
+import br.com.gubee.interview.model.powerstats.PowerStats;
+import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
+import br.com.gubee.interview.model.enums.Race;
+import java.time.Instant;
 import java.util.*;
-
-/*
-*   Nesse caso em específico, foi mais trabalhoso criar essa Stub do que a funcionalidade.
-* Não consegui fazer a classe com HeroRequest porque o contrato está sendo realizado com Hero.
-* E acredito que o HeroRequest que veio implementado, já veio com erro. Não faz sentido incluir
-* atributos de teste em uma requisição real do servidor. Por isso escolhi implementar assim.
-*
-* */
+import java.util.stream.Collectors;
 
 public class StubHeroRepository implements HeroRepository {
 
-    private List<Hero> heroes = new ArrayList<>();
-    private Map<UUID, PowerStats> map = new HashMap<>();
+    private final List<Hero> heroes = new ArrayList<>();
+    private final StubPowerStatsRepository stubStats;
+
+    public StubHeroRepository(StubPowerStatsRepository stubStats) {
+        this.stubStats = stubStats;
+    }
 
     @Override
     public UUID create(Hero hero) {
@@ -26,10 +25,6 @@ public class StubHeroRepository implements HeroRepository {
         hero.setId(id);
         heroes.add(hero);
         return id;
-    }
-
-    public void addPowerStat(UUID heroID, PowerStats stats) {
-        map.put(heroID, stats);
     }
 
     @Override
@@ -44,7 +39,7 @@ public class StubHeroRepository implements HeroRepository {
     public List<Hero> findByName(String value) {
         return heroes.stream()
                 .filter(hero ->  hero.getName().contains(value))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -62,17 +57,10 @@ public class StubHeroRepository implements HeroRepository {
         heroes.removeIf(hero -> hero.getId().equals(id));
     }
 
-    public Hero findByNameEquals(String name) {
-        return heroes.stream()
-                .filter(hero -> hero.getName().equals(name))
-                .findFirst()
-                .get();
-    }
-
     @Override
     public JoinHeroPowerStatsByHeroNameResponse findByNameJoinPowerStats(String name) {
-        Hero found = findByNameEquals(name);
-        PowerStats stats = map.get(found.getPowerStatsId());
+        Hero found = findByName(name).get(0);
+        PowerStats stats = stubStats.findById(found.getPowerStatsId());
         return JoinHeroPowerStatsByHeroNameResponse
                 .builder()
                 .id(found.getId())
@@ -81,5 +69,17 @@ public class StubHeroRepository implements HeroRepository {
                 .agility(stats.getAgility())
                 .strength(stats.getStrength())
                 .build();
+    }
+
+    public Hero createHero(String name, UUID statsId) {
+        Hero hero =  Hero.builder()
+                .name(name)
+                .race(Race.HUMAN)
+                .powerStatsId(statsId)
+                .createdAt(Instant.now())
+                .enabled(true)
+                .build();
+        create(hero);
+        return hero;
     }
 }
