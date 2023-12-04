@@ -17,39 +17,25 @@ public class HeroService {
 
     private final HeroRepository repository;
     @Transactional
-    public UUID create(HeroRequest heroDto) {
-        return repository.create(new Hero(heroDto));
+    public UUID create(Hero hero) {
+        return repository.create(hero);
     }
 
-    public HeroResponse findById(UUID id) {
+    public Hero findById(UUID id) {
         Hero hero = repository.findById(id);
-        return toHeroResponse(hero);
+        return hero;
     }
 
-    public List<HeroResponse> findHeroByName(String name) {
-        return repository
-                .findByName(name)
-                .stream()
-                .map(HeroService::toHeroResponse)
-                .collect(Collectors.toList());
+    public List<Hero> findHeroByName(String name) {
+        return repository.findByName(name);
     }
 
-    public void update(UUID id, HeroRequest request) {
-        repository.updateHero(id, new Hero(request));
-    }
-
-    public static HeroResponse toHeroResponse(Hero hero) {
-         return HeroResponse.builder()
-                .name(hero.getName())
-                .powerStatsId(hero.getPowerStatsId())
-                .race(hero.getRace())
-                .updatedAt(hero.getUpdatedAt())
-                .createdAt(hero.getCreatedAt())
-                .enabled(hero.isEnabled())
-                .build();
+    public void update(UUID id, Hero hero) {
+        repository.updateHero(id, hero);
     }
 
     public void deleteById(UUID id) {
         repository.deleteById(id);
     }
+
 }

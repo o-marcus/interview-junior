@@ -22,5 +22,6 @@ public class HeroRequest {
     @NotNull(message = "message.race.mandatory")
     private Race race;
     @NotNull(message = "message.stats.mandatory")
-    private UUID powerStats;
+    private UUID stats;
+
 }

@@ -3,9 +3,12 @@ package br.com.gubee.interview.core.features.hero;
 import br.com.gubee.interview.core.exception.NotFoundException;
 import br.com.gubee.interview.model.hero.Hero;
 import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
+import br.com.gubee.interview.model.powerstats.PowerStats;
 import lombok.RequiredArgsConstructor;
+import org.postgresql.util.PSQLException;
 import org.springframework.context.annotation.Primary;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -26,14 +29,15 @@ public class JDBCHeroRepository implements HeroRepository {
             final Map<String, Object> params = Map.of("name", hero.getName(),
                     "race", hero.getRace().name(),
                     "powerStatsId", hero.getPowerStatsId());
-
             return namedParameterJdbcTemplate.queryForObject(
                     CREATE_HERO_QUERY,
                     params,
                     UUID.class);
-        } catch (DataIntegrityViolationException e) {
-            throw new NotFoundException("on create foreign key power_stats_id not found");
         }
+        catch (DataIntegrityViolationException e) {
+            throw new NotFoundException(e.getMessage());
+        }
+
     }
 
     public Hero findById(UUID id) {
@@ -84,6 +88,13 @@ public class JDBCHeroRepository implements HeroRepository {
         }
     }
 
+    @Override
+    public List<Hero> findAll() {
+        return namedParameterJdbcTemplate.query(
+                FIND_ALL,
+                new BeanPropertyRowMapper<>(Hero.class));
+    }
+
     public void deleteById(UUID id) {
         final Map<String, Object> params = Map.of(
                 "id", id
@@ -93,6 +104,9 @@ public class JDBCHeroRepository implements HeroRepository {
             throw new NotFoundException("on delete id not found");
         }
     }
+
+    private static final String FIND_ALL =
+            "SELECT * FROM hero";
 
     private static final String CREATE_HERO_QUERY = "INSERT INTO hero" +
             " (name, race, power_stats_id)" +

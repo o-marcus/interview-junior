@@ -1,9 +1,9 @@
 package br.com.gubee.interview.core.features.hero;
 
 import br.com.gubee.interview.core.exception.NotFoundException;
-import br.com.gubee.interview.core.features.util.Builder;
+import br.com.gubee.interview.core.features.util.TestFactory;
+import br.com.gubee.interview.model.hero.Hero;
 import br.com.gubee.interview.model.hero.dto.HeroRequest;
-import br.com.gubee.interview.model.hero.dto.HeroResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,11 +34,9 @@ class HeroControllerTest {
     private HeroService heroService;
     private final String BASE_PATH = "/api/v1/heroes";
     private HeroRequest request;
-    private HeroResponse response;
-
     @BeforeEach
     void init() {
-        request = Builder.createHeroRequest();
+        request = TestFactory.createHeroRequest();
     }
 
     @Test
@@ -46,8 +44,7 @@ class HeroControllerTest {
         when(heroService.create(any())).thenReturn(UUID.randomUUID());
         final String body = objectMapper.writeValueAsString(request);
         final ResultActions actions = perform(body, () -> post(BASE_PATH));
-        actions.andExpect(status().isCreated())
-                .andExpect(header().exists("Location"));
+        actions.andExpect(status().isCreated()).andExpect(header().exists("Location"));
         verify(heroService, times(1)).create(any());
     }
 
@@ -63,7 +60,7 @@ class HeroControllerTest {
 
     @Test
     void findByIdWithRequiredArguments() throws Exception {
-        when(heroService.findById(isA(UUID.class))).thenReturn(response);
+        when(heroService.findById(isA(UUID.class))).thenReturn(TestFactory.createHero());
         ResultActions actions = perform(() -> MockMvcRequestBuilders.get(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isOk());
         verify(heroService, times(1)).findById(any(UUID.class));
@@ -82,16 +79,16 @@ class HeroControllerTest {
         var body = objectMapper.writeValueAsString(request);
         ResultActions actions = perform(body, () -> MockMvcRequestBuilders.put(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isOk());
-        verify(heroService, times(1)).update(any(UUID.class), any(HeroRequest.class));
+        verify(heroService, times(1)).update(any(UUID.class), any(Hero.class));
     }
 
     @Test
     void updateHeroShouldReturnNotFoundWhenHeroIdNotExists() throws Exception {
-        doThrow(new NotFoundException()).when(heroService).update(any(UUID.class), any(HeroRequest.class));
+        doThrow(new NotFoundException()).when(heroService).update(any(UUID.class), any(Hero.class));
         var body = objectMapper.writeValueAsString(request);
         ResultActions actions = perform(body, () -> MockMvcRequestBuilders.put(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isNotFound());
-        verify(heroService, times(1)).update(any(UUID.class), any(HeroRequest.class));
+        verify(heroService, times(1)).update(any(UUID.class), any(Hero.class));
     }
 
     @Test

@@ -12,11 +12,16 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class PowerStatsService {
 
-    private final JDBCPowerStatsRepository powerStatsRepository;
+    private final PowerStatsRepository powerStatsRepository;
 
     @Transactional
     public UUID create(PowerStatsRequest powerStats) {
         return powerStatsRepository.create(map(powerStats));
+    }
+
+    @Transactional
+    public void deleteById(UUID id) {
+        powerStatsRepository.deleteById(id);
     }
 
     public static PowerStats map(PowerStatsRequest powerStats) {
@@ -25,8 +30,6 @@ public class PowerStatsService {
                 .dexterity(powerStats.getDexterity())
                 .agility(powerStats.getAgility())
                 .strength(powerStats.getStrength())
-                .createdAt(powerStats.getCreatedAt())
-                .updatedAt(powerStats.getUpdatedAt())
                 .build();
     }
 }

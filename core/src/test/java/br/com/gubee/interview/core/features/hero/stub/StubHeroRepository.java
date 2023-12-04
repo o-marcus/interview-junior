@@ -53,6 +53,11 @@ public class StubHeroRepository implements HeroRepository {
     }
 
     @Override
+    public List<Hero> findAll() {
+        return heroes;
+    }
+
+    @Override
     public void deleteById(UUID id) {
         heroes.removeIf(hero -> hero.getId().equals(id));
     }

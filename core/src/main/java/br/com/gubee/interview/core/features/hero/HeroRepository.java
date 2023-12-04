@@ -11,6 +11,7 @@ public interface HeroRepository {
     Hero findById(UUID id);
     List<Hero> findByName(String value);
     void updateHero(UUID id, Hero hero);
+    List<Hero> findAll();
     public void deleteById(UUID id);
     JoinHeroPowerStatsByHeroNameResponse findByNameJoinPowerStats(String name);
 }

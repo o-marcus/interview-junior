@@ -26,6 +26,16 @@ public class StubPowerStatsRepository
                 .get();
     }
 
+    @Override
+    public List<PowerStats> findAll() {
+        return stats;
+    }
+
+    @Override
+    public void deleteById(UUID id) {
+        stats.removeIf(stat -> stat.getId().equals(id));
+    }
+
     public PowerStats createStats(int dextery, int intelligence, int agility, int strength) {
         PowerStats stat = PowerStats
                 .builder()

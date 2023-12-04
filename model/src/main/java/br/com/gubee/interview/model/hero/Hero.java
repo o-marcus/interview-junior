@@ -26,9 +26,4 @@ public class Hero {
     private Instant updatedAt;
     private boolean enabled;
 
-    public Hero(HeroRequest heroDto) {
-        this.name = heroDto.getName();
-        this.race = heroDto.getRace();
-        this.powerStatsId = heroDto.getPowerStats();
-    }
 }
