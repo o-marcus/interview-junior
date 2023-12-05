@@ -1,12 +1,10 @@
 package br.com.gubee.interview.core.features.powerstats;
 
 import br.com.gubee.interview.core.exception.NotFoundException;
-import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
 import br.com.gubee.interview.model.powerstats.PowerStats;
-import lombok.Data;
+import br.com.gubee.interview.model.powerstats.PowerStatsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataAccessException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;

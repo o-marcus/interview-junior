@@ -1,10 +1,11 @@
 package br.com.gubee.interview.core.features.compareheroes;
 
-import br.com.gubee.interview.core.features.hero.stub.StubHeroRepository;
-import br.com.gubee.interview.core.features.powerstats.stub.StubPowerStatsRepository;
 import br.com.gubee.interview.model.hero.Hero;
+import br.com.gubee.interview.model.hero.stub.StubHeroRepository;
 import br.com.gubee.interview.model.powerstats.PowerStats;
+import br.com.gubee.interview.model.powerstats.stub.StubPowerStatsRepository;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CompareHeroServiceTest {

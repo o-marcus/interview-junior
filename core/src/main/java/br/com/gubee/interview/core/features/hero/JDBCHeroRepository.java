@@ -2,19 +2,14 @@ package br.com.gubee.interview.core.features.hero;
 
 import br.com.gubee.interview.core.exception.NotFoundException;
 import br.com.gubee.interview.model.hero.Hero;
+import br.com.gubee.interview.model.hero.HeroRepository;
 import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
-import br.com.gubee.interview.model.powerstats.PowerStats;
 import lombok.RequiredArgsConstructor;
-import org.postgresql.util.PSQLException;
 import org.springframework.context.annotation.Primary;
 import org.springframework.dao.DataAccessException;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.DuplicateKeyException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;

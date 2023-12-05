@@ -1,0 +1,17 @@
+br\com\gubee\interview\core\features\hero\JDBCHeroRepository.class
+br\com\gubee\interview\core\features\powerstats\PowerStatsController.class
+br\com\gubee\interview\core\features\powerstats\DatabasePowerStatsService.class
+br\com\gubee\interview\core\exception\NotFoundException.class
+br\com\gubee\interview\core\features\hero\HeroController.class
+br\com\gubee\interview\core\configuration\JdbcConfiguration.class
+br\com\gubee\interview\core\features\powerstats\JDBCPowerStatsRepository.class
+br\com\gubee\interview\core\features\hero\HeroMapper.class
+br\com\gubee\interview\core\features\hero\DatabaseHeroService.class
+br\com\gubee\interview\core\features\powerstats\PowerStatsMapper.class
+br\com\gubee\interview\core\Application.class
+br\com\gubee\interview\core\features\compareheroes\CompareHeroesUseCase.class
+br\com\gubee\interview\core\features\compareheroes\CompareHeroesController.class
+br\com\gubee\interview\core\exception\ExceptionAdvice.class
+br\com\gubee\interview\core\configuration\WebConfiguration.class
+br\com\gubee\interview\core\features\di\ServiceConfig.class
+br\com\gubee\interview\core\features\compareheroes\CompareHeroesService.class

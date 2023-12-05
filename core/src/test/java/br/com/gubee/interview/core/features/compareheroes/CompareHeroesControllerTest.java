@@ -1,7 +1,7 @@
 package br.com.gubee.interview.core.features.compareheroes;
 
-import br.com.gubee.interview.core.features.hero.HeroRepository;
-import br.com.gubee.interview.core.features.powerstats.PowerStatsRepository;
+import br.com.gubee.interview.model.hero.HeroRepository;
+import br.com.gubee.interview.model.powerstats.PowerStatsRepository;
 import br.com.gubee.interview.model.compareheroes.CompareHeroesResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

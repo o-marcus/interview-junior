@@ -3,6 +3,7 @@ package br.com.gubee.interview.core.features.hero;
 import br.com.gubee.interview.model.hero.Hero;
 import br.com.gubee.interview.model.hero.dto.HeroRequest;
 import br.com.gubee.interview.model.hero.dto.HeroResponse;
+import br.com.gubee.interview.model.hero.HeroService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -31,25 +32,25 @@ public class HeroController {
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<String> update(@PathVariable("id") UUID id, @Validated @RequestBody HeroRequest heroRequest) {
-        heroService.update(id, HeroMapper.toHero(heroRequest));
+        heroService.updateHero(id, HeroMapper.toHero(heroRequest));
         return ok().body("updated hero with sucess");
    }
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<HeroResponse> getHeroByID(@PathVariable("id") UUID id) {
-        Hero hero = heroService.findById(id);
+        Hero hero = heroService.findHero(id);
         return ok(HeroMapper.toHeroResponse(hero));
     }
 
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<String> deleteById(@PathVariable("id") UUID id) {
-        heroService.deleteById(id);
+        heroService.deleteHero(id);
         return ok("deleted sucessfully");
     }
 
     @GetMapping(path = "/search/{name}")
     public ResponseEntity<List<HeroResponse>> getHeroByNameLike(@PathVariable("name") String name) {
-        List<Hero> heroes = heroService.findHeroByName(name);
+        List<Hero> heroes = heroService.findHero(name);
         var response = heroes
                 .stream()
                 .map(HeroMapper::toHeroResponse)

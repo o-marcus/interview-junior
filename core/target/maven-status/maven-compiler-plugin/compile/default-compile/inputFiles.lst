@@ -1,0 +1,17 @@
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\hero\HeroMapper.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\configuration\WebConfiguration.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\compareheroes\CompareHeroesService.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\exception\ExceptionAdvice.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\hero\HeroController.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\configuration\JdbcConfiguration.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\hero\DatabaseHeroService.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\compareheroes\CompareHeroesUseCase.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\Application.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\compareheroes\CompareHeroesController.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\hero\JDBCHeroRepository.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\powerstats\PowerStatsController.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\powerstats\PowerStatsMapper.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\powerstats\JDBCPowerStatsRepository.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\exception\NotFoundException.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\powerstats\DatabasePowerStatsService.java
+C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core\src\main\java\br\com\gubee\interview\core\features\di\ServiceConfig.java

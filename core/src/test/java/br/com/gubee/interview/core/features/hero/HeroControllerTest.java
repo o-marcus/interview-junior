@@ -31,7 +31,7 @@ class HeroControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
     @MockBean
-    private HeroService heroService;
+    private DatabaseHeroService heroService;
     private final String BASE_PATH = "/api/v1/heroes";
     private HeroRequest request;
     @BeforeEach
@@ -59,50 +59,50 @@ class HeroControllerTest {
 
 
     @Test
-    void findByIdWithRequiredArguments() throws Exception {
-        when(heroService.findById(isA(UUID.class))).thenReturn(TestFactory.createHero());
+    void findHeroWithRequiredArguments() throws Exception {
+        when(heroService.findHero(isA(UUID.class))).thenReturn(TestFactory.createHero());
         ResultActions actions = perform(() -> MockMvcRequestBuilders.get(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isOk());
-        verify(heroService, times(1)).findById(any(UUID.class));
+        verify(heroService, times(1)).findHero(any(UUID.class));
     }
 
     @Test
-    void findByIdShouldReturnNotFoundWhenHeroIdNotExists() throws Exception {
-        when(heroService.findById(any(UUID.class))).thenThrow(new NotFoundException());
+    void findHeroShouldReturnNotFoundWhenHeroIdNotExists() throws Exception {
+        when(heroService.findHero(any(UUID.class))).thenThrow(new NotFoundException());
         ResultActions actions = perform(() -> MockMvcRequestBuilders.get(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isNotFound());
-        verify(heroService, times(1)).findById(any(UUID.class));
+        verify(heroService, times(1)).findHero(any(UUID.class));
     }
 
     @Test
-    void updateHeroWithRequiredArguments() throws Exception {
+    void updateHeroHeroWithRequiredArguments() throws Exception {
         var body = objectMapper.writeValueAsString(request);
         ResultActions actions = perform(body, () -> MockMvcRequestBuilders.put(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isOk());
-        verify(heroService, times(1)).update(any(UUID.class), any(Hero.class));
+        verify(heroService, times(1)).updateHero(any(UUID.class), any(Hero.class));
     }
 
     @Test
-    void updateHeroShouldReturnNotFoundWhenHeroIdNotExists() throws Exception {
-        doThrow(new NotFoundException()).when(heroService).update(any(UUID.class), any(Hero.class));
+    void updateHeroHeroShouldReturnNotFoundWhenHeroIdNotExists() throws Exception {
+        doThrow(new NotFoundException()).when(heroService).updateHero(any(UUID.class), any(Hero.class));
         var body = objectMapper.writeValueAsString(request);
         ResultActions actions = perform(body, () -> MockMvcRequestBuilders.put(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isNotFound());
-        verify(heroService, times(1)).update(any(UUID.class), any(Hero.class));
+        verify(heroService, times(1)).updateHero(any(UUID.class), any(Hero.class));
     }
 
     @Test
     void deleteHeroWithRequiredArguments() throws Exception {
         ResultActions actions = perform(() -> MockMvcRequestBuilders.delete(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isOk());
-        verify(heroService, times(1)).deleteById(any(UUID.class));
+        verify(heroService, times(1)).deleteHero(any(UUID.class));
     }
 
     @Test void deleteHeroShouldReturnNotFoundWhenHeroIdNotExists() throws Exception {
-        doThrow(new NotFoundException()).when(heroService).deleteById(any(UUID.class));
+        doThrow(new NotFoundException()).when(heroService).deleteHero(any(UUID.class));
         ResultActions actions = perform(() -> MockMvcRequestBuilders.delete(BASE_PATH + "/{id}", UUID.randomUUID()));
         actions.andExpect(status().isNotFound());
-        verify(heroService, times(1)).deleteById(any(UUID.class));
+        verify(heroService, times(1)).deleteHero(any(UUID.class));
     }
 
     ResultActions perform(String body, Supplier<MockHttpServletRequestBuilder> method) throws Exception {
