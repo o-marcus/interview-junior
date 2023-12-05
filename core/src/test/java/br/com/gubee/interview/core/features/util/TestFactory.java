@@ -50,10 +50,10 @@ public class TestFactory {
 
     public static PowerStats createPowerStats() {
         return PowerStats.builder()
-                .agility(8)
-                .intelligence(8)
-                .dexterity(8)
-                .strength(8)
+                .agility(random.nextInt(10))
+                .intelligence(random.nextInt( 10))
+                .dexterity(random.nextInt( 10))
+                .strength(random.nextInt( 10))
                 .build();
     }
 

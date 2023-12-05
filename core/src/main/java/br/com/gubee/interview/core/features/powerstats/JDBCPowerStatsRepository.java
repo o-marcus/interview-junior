@@ -38,10 +38,12 @@ public class JDBCPowerStatsRepository implements PowerStatsRepository {
 
     public UUID create(PowerStats powerStats) {
         try {
-            return namedParameterJdbcTemplate.queryForObject(
+            var id = namedParameterJdbcTemplate.queryForObject(
                     CREATE_POWER_STATS_QUERY,
                     new BeanPropertySqlParameterSource(powerStats),
                     UUID.class);
+            powerStats.setId(id);
+            return id;
         }
         catch (DataAccessException exception) {
             exception.printStackTrace();

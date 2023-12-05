@@ -18,7 +18,7 @@ public class CompareHeroesController {
     private final CompareHeroesUseCase compareUseCase;
 
     @GetMapping
-    public ResponseEntity<CompareHeroesResponse> getHeroByID(@RequestParam String firstHero, @RequestParam String secondHero) {
+    public ResponseEntity<CompareHeroesResponse> compareHeroesByName(@RequestParam String firstHero, @RequestParam String secondHero) {
         CompareHeroesResponse compareResponse = compareUseCase.compare(firstHero, secondHero);
         return ResponseEntity.ok(compareResponse);
     }

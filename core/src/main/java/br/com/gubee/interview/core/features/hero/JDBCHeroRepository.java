@@ -31,10 +31,12 @@ public class JDBCHeroRepository implements HeroRepository {
             final Map<String, Object> params = Map.of("name", hero.getName(),
                     "race", hero.getRace().name(),
                     "powerStatsId", hero.getPowerStatsId());
-            return namedParameterJdbcTemplate.queryForObject(
+            var id = namedParameterJdbcTemplate.queryForObject(
                     CREATE_HERO_QUERY,
                     params,
                     UUID.class);
+            hero.setId(id);
+            return id;
         } catch (DataAccessException e) {
             throw new NotFoundException(e.getMessage());
         }

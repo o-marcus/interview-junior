@@ -39,7 +39,6 @@ class HeroControllerTestEndpointIT {
     @Container
     static final PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>("postgres:12")
             .withReuse(false);
-
     @Autowired
     private MockMvc mockMvc;
     @Autowired
@@ -48,7 +47,7 @@ class HeroControllerTestEndpointIT {
     private PowerStatsRepository powerStatsRepository;
     @Autowired
     private HeroRepository heroRepository;
-    private final String BASE_PATH = "/api/v1/heroes";
+    private final String BASE_PATH = "/api/v1/compare";
     UUID powerStatsId;
     UUID heroId;
 
