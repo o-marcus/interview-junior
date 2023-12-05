@@ -26,6 +26,8 @@ import java.util.UUID;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static br.com.gubee.interview.core.features.util.Util.toUUID;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -179,13 +181,5 @@ class HeroControllerTestEndpointIT {
             throws Exception {
         return mockMvc.perform(method.get());
     }
-
-
-    UUID toUUID(ResultActions actions) {
-        var uri = actions.andReturn().getResponse().getHeader("Location");
-        if (uri == null) throw new RuntimeException();
-        return UUID.fromString(uri.substring(uri.lastIndexOf("/") + 1));
-    }
-
 
 }

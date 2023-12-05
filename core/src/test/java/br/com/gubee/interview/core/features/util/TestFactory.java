@@ -48,6 +48,15 @@ public class TestFactory {
                 .build();
     }
 
+    public static PowerStatsRequest createPowerStatsRequest() {
+        return PowerStatsRequest.builder()
+                .agility(random.nextInt(10))
+                .intelligence(random.nextInt( 10))
+                .dexterity(random.nextInt( 10))
+                .strength(random.nextInt( 10))
+                .build();
+    }
+
     public static PowerStats createPowerStats() {
         return PowerStats.builder()
                 .agility(random.nextInt(10))

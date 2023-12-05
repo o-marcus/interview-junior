@@ -17,7 +17,6 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @NoArgsConstructor(access = PRIVATE)
 public class Hero {
-
     private UUID id;
     private String name;
     private Race race;
@@ -25,5 +24,4 @@ public class Hero {
     private Instant createdAt;
     private Instant updatedAt;
     private boolean enabled;
-
 }

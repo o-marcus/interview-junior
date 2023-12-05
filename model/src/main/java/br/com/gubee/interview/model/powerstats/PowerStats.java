@@ -15,7 +15,6 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @Builder
 public class PowerStats {
-
     private UUID id;
     private int strength;
     private int agility;
@@ -23,5 +22,4 @@ public class PowerStats {
     private int intelligence;
     private Instant createdAt;
     private Instant updatedAt;
-
 }

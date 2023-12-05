@@ -46,8 +46,7 @@ public class JDBCPowerStatsRepository implements PowerStatsRepository {
             return id;
         }
         catch (DataAccessException exception) {
-            exception.printStackTrace();
-            throw new RuntimeException();
+            throw new NotFoundException();
         }
     }
 

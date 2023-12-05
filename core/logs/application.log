@@ -12925,3 +12925,126 @@ Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "
 [WARN ] [2023-12-05T10:06:53,091] [main] [ExceptionAdvice] on findById id not found 
 [INFO ] [2023-12-05T10:06:54,968] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
 [INFO ] [2023-12-05T10:06:55,007] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-12-05T10:37:43,086] [main] [SpringBootTestContextBootstrapper] Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest], using SpringBootContextLoader 
+[INFO ] [2023-12-05T10:37:43,122] [main] [AbstractContextLoader] Could not detect default resource locations for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}. 
+[INFO ] [2023-12-05T10:37:43,126] [main] [AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest]: PowerStatsControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+[INFO ] [2023-12-05T10:37:43,804] [main] [SpringBootTestContextBootstrapper] Found @SpringBootConfiguration br.com.gubee.interview.core.Application for test class br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest 
+[INFO ] [2023-12-05T10:37:44,399] [main] [SpringBootTestContextBootstrapper] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener] 
+[INFO ] [2023-12-05T10:37:44,482] [main] [SpringBootTestContextBootstrapper] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24097e9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5eb97ced, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@68ba310d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@153f66e7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7aad3f7d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6f667ad1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@566d0c69, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@388b401d, org.springframework.test.context.event.EventPublishingTestExecutionListener@2bcec6a6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@77a281fc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4912d525, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2bfbffb2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@765df79d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@151335cb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4a7761b1] 
+[INFO ] [2023-12-05T10:37:44,662] [main] [DockerClientProviderStrategy] Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first 
+[INFO ] [2023-12-05T10:37:46,861] [main] [DockerClientProviderStrategy] Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine) 
+[INFO ] [2023-12-05T10:37:46,868] [main] [DockerClientFactory] Docker host IP address is localhost 
+[INFO ] [2023-12-05T10:37:47,006] [main] [DockerClientFactory] Connected to docker: 
+  Server Version: 24.0.6
+  API Version: 1.43
+  Operating System: Docker Desktop
+  Total Memory: 1908 MB 
+[INFO ] [2023-12-05T10:37:47,022] [main] [ImageNameSubstitutor] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor') 
+[INFO ] [2023-12-05T10:37:50,839] [main] [RegistryAuthLocator] Credential helper/store (docker-credential-desktop) does not have credentials for index.docker.io 
+[INFO ] [2023-12-05T10:38:08,912] [main] [DockerClientFactory] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit 
+[INFO ] [2023-12-05T10:38:08,915] [main] [DockerClientFactory] Checking the system... 
+[INFO ] [2023-12-05T10:38:08,918] [main] [DockerClientFactory] ✔︎ Docker server version should be at least 1.6.0 
+[INFO ] [2023-12-05T10:38:18,472] [main] [DockerClientFactory] ✔︎ Docker environment should have more than 2GB free disk space 
+[INFO ] [2023-12-05T10:38:18,529] [main] [🐳 [postgres:12]] Creating container for image: postgres:12 
+[INFO ] [2023-12-05T10:38:18,737] [main] [🐳 [postgres:12]] Container postgres:12 is starting: be966b059155bd20a957b44cddd51e7a9c1452fb221cf8444ab8a7a83345cf53 
+[INFO ] [2023-12-05T10:38:36,752] [main] [🐳 [postgres:12]] Container postgres:12 started in PT18.2793724S 
+[INFO ] [2023-12-05T10:38:38,014] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-12-05T10:38:38,272] [main] [PowerStatsControllerTest] Starting PowerStatsControllerTest using Java 17.0.6 on DESKTOP-J38CSCD with PID 10604 (started by marcu in C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core) 
+[INFO ] [2023-12-05T10:38:38,288] [main] [PowerStatsControllerTest] The following 1 profile is active: "it" 
+[INFO ] [2023-12-05T10:38:43,210] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-05T10:38:43,257] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-05T10:38:46,273] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-12-05T10:38:46,955] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-12-05T10:38:47,033] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-12-05T10:38:47,036] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5433/postgres (PostgreSQL 12.17) 
+[INFO ] [2023-12-05T10:38:47,398] [main] [DbValidate] Successfully validated 3 migrations (execution time 00:00.192s) 
+[INFO ] [2023-12-05T10:38:47,468] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-12-05T10:38:47,478] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-12-05T10:38:54,842] [main] [SpringBootMockServletContext] Initializing Spring TestDispatcherServlet '' 
+[INFO ] [2023-12-05T10:38:54,844] [main] [TestDispatcherServlet] Initializing Servlet '' 
+[INFO ] [2023-12-05T10:38:54,851] [main] [TestDispatcherServlet] Completed initialization in 6 ms 
+[INFO ] [2023-12-05T10:38:54,946] [main] [PowerStatsControllerTest] Started PowerStatsControllerTest in 18.025 seconds (JVM running for 79.243) 
+[INFO ] [2023-12-05T10:39:00,784] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-12-05T10:39:00,798] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-12-05T10:40:47,380] [main] [SpringBootTestContextBootstrapper] Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest], using SpringBootContextLoader 
+[INFO ] [2023-12-05T10:40:47,417] [main] [AbstractContextLoader] Could not detect default resource locations for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}. 
+[INFO ] [2023-12-05T10:40:47,421] [main] [AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest]: PowerStatsControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+[INFO ] [2023-12-05T10:40:48,099] [main] [SpringBootTestContextBootstrapper] Found @SpringBootConfiguration br.com.gubee.interview.core.Application for test class br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest 
+[INFO ] [2023-12-05T10:40:48,614] [main] [SpringBootTestContextBootstrapper] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener] 
+[INFO ] [2023-12-05T10:40:48,692] [main] [SpringBootTestContextBootstrapper] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@68ba310d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@153f66e7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7aad3f7d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6f667ad1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@566d0c69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@388b401d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2bcec6a6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77a281fc, org.springframework.test.context.event.EventPublishingTestExecutionListener@4912d525, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2bfbffb2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@765df79d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@151335cb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4a7761b1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3e850122, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@27fde870] 
+[INFO ] [2023-12-05T10:40:48,855] [main] [DockerClientProviderStrategy] Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first 
+[INFO ] [2023-12-05T10:40:51,209] [main] [DockerClientProviderStrategy] Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine) 
+[INFO ] [2023-12-05T10:40:51,215] [main] [DockerClientFactory] Docker host IP address is localhost 
+[INFO ] [2023-12-05T10:40:51,399] [main] [DockerClientFactory] Connected to docker: 
+  Server Version: 24.0.6
+  API Version: 1.43
+  Operating System: Docker Desktop
+  Total Memory: 1908 MB 
+[INFO ] [2023-12-05T10:40:51,417] [main] [ImageNameSubstitutor] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor') 
+[INFO ] [2023-12-05T10:40:52,299] [main] [RegistryAuthLocator] Credential helper/store (docker-credential-desktop) does not have credentials for index.docker.io 
+[INFO ] [2023-12-05T10:40:55,141] [main] [DockerClientFactory] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit 
+[INFO ] [2023-12-05T10:40:55,143] [main] [DockerClientFactory] Checking the system... 
+[INFO ] [2023-12-05T10:40:55,146] [main] [DockerClientFactory] ✔︎ Docker server version should be at least 1.6.0 
+[INFO ] [2023-12-05T10:40:55,367] [main] [DockerClientFactory] ✔︎ Docker environment should have more than 2GB free disk space 
+[INFO ] [2023-12-05T10:40:55,459] [main] [🐳 [postgres:12]] Creating container for image: postgres:12 
+[INFO ] [2023-12-05T10:40:55,812] [main] [🐳 [postgres:12]] Container postgres:12 is starting: fe63f27b8f0685d403f4d4a7e28fdd2e550c95d48a4bf4bf52f1cd293d86bcc0 
+[INFO ] [2023-12-05T10:41:05,455] [main] [🐳 [postgres:12]] Container postgres:12 started in PT10.0854995S 
+[INFO ] [2023-12-05T10:41:06,630] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-12-05T10:41:06,822] [main] [PowerStatsControllerTest] Starting PowerStatsControllerTest using Java 17.0.6 on DESKTOP-J38CSCD with PID 10608 (started by marcu in C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core) 
+[INFO ] [2023-12-05T10:41:06,838] [main] [PowerStatsControllerTest] The following 1 profile is active: "it" 
+[INFO ] [2023-12-05T10:41:10,026] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-05T10:41:10,119] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 73 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-05T10:41:12,926] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-12-05T10:41:13,527] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-12-05T10:41:13,588] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-12-05T10:41:13,590] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5433/postgres (PostgreSQL 12.17) 
+[INFO ] [2023-12-05T10:41:13,892] [main] [DbValidate] Successfully validated 3 migrations (execution time 00:00.190s) 
+[INFO ] [2023-12-05T10:41:13,952] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-12-05T10:41:13,958] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-12-05T10:41:20,593] [main] [SpringBootMockServletContext] Initializing Spring TestDispatcherServlet '' 
+[INFO ] [2023-12-05T10:41:20,594] [main] [TestDispatcherServlet] Initializing Servlet '' 
+[INFO ] [2023-12-05T10:41:20,608] [main] [TestDispatcherServlet] Completed initialization in 12 ms 
+[INFO ] [2023-12-05T10:41:20,705] [main] [PowerStatsControllerTest] Started PowerStatsControllerTest in 15.125 seconds (JVM running for 39.962) 
+[INFO ] [2023-12-05T10:41:27,050] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-12-05T10:41:27,064] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-12-05T10:42:03,114] [main] [SpringBootTestContextBootstrapper] Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest], using SpringBootContextLoader 
+[INFO ] [2023-12-05T10:42:03,174] [main] [AbstractContextLoader] Could not detect default resource locations for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}. 
+[INFO ] [2023-12-05T10:42:03,178] [main] [AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest]: PowerStatsControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+[INFO ] [2023-12-05T10:42:03,877] [main] [SpringBootTestContextBootstrapper] Found @SpringBootConfiguration br.com.gubee.interview.core.Application for test class br.com.gubee.interview.core.features.powerstats.PowerStatsControllerTest 
+[INFO ] [2023-12-05T10:42:04,360] [main] [SpringBootTestContextBootstrapper] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener] 
+[INFO ] [2023-12-05T10:42:04,424] [main] [SpringBootTestContextBootstrapper] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@153f66e7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7aad3f7d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6f667ad1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@566d0c69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@388b401d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2bcec6a6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@77a281fc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4912d525, org.springframework.test.context.event.EventPublishingTestExecutionListener@2bfbffb2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@765df79d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@151335cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4a7761b1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3e850122, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@27fde870, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2b4c3c29] 
+[INFO ] [2023-12-05T10:42:04,577] [main] [DockerClientProviderStrategy] Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first 
+[INFO ] [2023-12-05T10:42:06,685] [main] [DockerClientProviderStrategy] Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine) 
+[INFO ] [2023-12-05T10:42:06,690] [main] [DockerClientFactory] Docker host IP address is localhost 
+[INFO ] [2023-12-05T10:42:06,805] [main] [DockerClientFactory] Connected to docker: 
+  Server Version: 24.0.6
+  API Version: 1.43
+  Operating System: Docker Desktop
+  Total Memory: 1908 MB 
+[INFO ] [2023-12-05T10:42:06,817] [main] [ImageNameSubstitutor] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor') 
+[INFO ] [2023-12-05T10:42:07,711] [main] [RegistryAuthLocator] Credential helper/store (docker-credential-desktop) does not have credentials for index.docker.io 
+[INFO ] [2023-12-05T10:42:10,614] [main] [DockerClientFactory] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit 
+[INFO ] [2023-12-05T10:42:10,617] [main] [DockerClientFactory] Checking the system... 
+[INFO ] [2023-12-05T10:42:10,622] [main] [DockerClientFactory] ✔︎ Docker server version should be at least 1.6.0 
+[INFO ] [2023-12-05T10:42:10,836] [main] [DockerClientFactory] ✔︎ Docker environment should have more than 2GB free disk space 
+[INFO ] [2023-12-05T10:42:10,921] [main] [🐳 [postgres:12]] Creating container for image: postgres:12 
+[INFO ] [2023-12-05T10:42:11,212] [main] [🐳 [postgres:12]] Container postgres:12 is starting: 5030e4d9a22a04d13ba2f46d7813d302e70ca54d20065a42e56c1e6913c79aa7 
+[INFO ] [2023-12-05T10:42:19,346] [main] [🐳 [postgres:12]] Container postgres:12 started in PT8.5087048S 
+[INFO ] [2023-12-05T10:42:20,057] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-12-05T10:42:20,179] [main] [PowerStatsControllerTest] Starting PowerStatsControllerTest using Java 17.0.6 on DESKTOP-J38CSCD with PID 16860 (started by marcu in C:\Users\marcu\Desktop\interview-trainee-gubee\interview-junior\core) 
+[INFO ] [2023-12-05T10:42:20,199] [main] [PowerStatsControllerTest] The following 1 profile is active: "it" 
+[INFO ] [2023-12-05T10:42:23,404] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-05T10:42:23,465] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 47 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-05T10:42:26,170] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-12-05T10:42:26,826] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-12-05T10:42:26,893] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-12-05T10:42:26,895] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5433/postgres (PostgreSQL 12.17) 
+[INFO ] [2023-12-05T10:42:27,191] [main] [DbValidate] Successfully validated 3 migrations (execution time 00:00.161s) 
+[INFO ] [2023-12-05T10:42:27,245] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-12-05T10:42:27,251] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-12-05T10:42:34,043] [main] [SpringBootMockServletContext] Initializing Spring TestDispatcherServlet '' 
+[INFO ] [2023-12-05T10:42:34,045] [main] [TestDispatcherServlet] Initializing Servlet '' 
+[INFO ] [2023-12-05T10:42:34,049] [main] [TestDispatcherServlet] Completed initialization in 2 ms 
+[INFO ] [2023-12-05T10:42:34,166] [main] [PowerStatsControllerTest] Started PowerStatsControllerTest in 14.726 seconds (JVM running for 38.171) 
+[INFO ] [2023-12-05T10:42:40,526] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-12-05T10:42:40,546] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
