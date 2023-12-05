@@ -30,16 +30,14 @@ public class TestFactory {
                 .build();
     }
 
-    public static HeroResponse createHeroResponse() {
-        return HeroResponse.builder()
-                .name(Name+random.nextInt())
+    public static HeroRequest createHeroRequest(String name, UUID id) {
+        return HeroRequest.builder()
+                .name(name)
                 .race(Race.HUMAN)
-                .powerStatsId(UUID.randomUUID())
-                .createdAt(Instant.now())
-                .updatedAt(Instant.now())
-                .enabled(true)
+                .stats(id)
                 .build();
     }
+
 
     public static Hero createHero() {
         return Hero.builder()
@@ -47,25 +45,6 @@ public class TestFactory {
                 .powerStatsId(UUID.randomUUID())
                 .race(Race.HUMAN)
                 .enabled(true)
-                .build();
-    }
-
-    public static Hero createHero(UUID id) {
-        return Hero.builder()
-                .name(Name + random.nextInt())
-                .race(Race.HUMAN)
-                .powerStatsId(id)
-                .enabled(true)
-                .build();
-    }
-
-
-    public static PowerStatsRequest createPowerStatsRequest() {
-        return PowerStatsRequest.builder()
-                .agility(8)
-                .intelligence(8)
-                .dexterity(8)
-                .strength(8)
                 .build();
     }
 
@@ -77,6 +56,5 @@ public class TestFactory {
                 .strength(8)
                 .build();
     }
-
 
 }

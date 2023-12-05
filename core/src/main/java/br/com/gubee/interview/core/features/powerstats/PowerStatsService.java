@@ -15,8 +15,8 @@ public class PowerStatsService {
     private final PowerStatsRepository powerStatsRepository;
 
     @Transactional
-    public UUID create(PowerStatsRequest powerStats) {
-        return powerStatsRepository.create(map(powerStats));
+    public UUID create(PowerStats powerStats) {
+        return powerStatsRepository.create(powerStats);
     }
 
     @Transactional
@@ -24,12 +24,4 @@ public class PowerStatsService {
         powerStatsRepository.deleteById(id);
     }
 
-    public static PowerStats map(PowerStatsRequest powerStats) {
-        return  PowerStats.builder()
-                .intelligence(powerStats.getIntelligence())
-                .dexterity(powerStats.getDexterity())
-                .agility(powerStats.getAgility())
-                .strength(powerStats.getStrength())
-                .build();
-    }
 }

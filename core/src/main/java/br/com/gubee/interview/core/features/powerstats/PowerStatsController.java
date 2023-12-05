@@ -23,7 +23,7 @@ public class PowerStatsController {
     @ExceptionHandler(BindException.class)
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> create(@Validated @RequestBody PowerStatsRequest stats) {
-        final UUID id = service.create(stats);
+        final UUID id = service.create(PowerStatsMapper.toPowerStats(stats));
         return created(URI.create(format("/api/v1/heroes/%s", id))).build();
     }
 

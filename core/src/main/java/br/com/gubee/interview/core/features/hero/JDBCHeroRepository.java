@@ -7,12 +7,14 @@ import br.com.gubee.interview.model.powerstats.PowerStats;
 import lombok.RequiredArgsConstructor;
 import org.postgresql.util.PSQLException;
 import org.springframework.context.annotation.Primary;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -33,13 +35,12 @@ public class JDBCHeroRepository implements HeroRepository {
                     CREATE_HERO_QUERY,
                     params,
                     UUID.class);
-        }
-        catch (DataIntegrityViolationException e) {
+        } catch (DataAccessException e) {
             throw new NotFoundException(e.getMessage());
         }
-
     }
 
+    @Override
     public Hero findById(UUID id) {
         try {
             final Map<String, Object> params = Map.of("id", id);
@@ -47,8 +48,8 @@ public class JDBCHeroRepository implements HeroRepository {
                     FIND_HERO_BY_ID,
                     params,
                     new BeanPropertyRowMapper<>(Hero.class));
-        } catch (EmptyResultDataAccessException exception) {
-            throw new NotFoundException("on findById id not found");
+        } catch (DataAccessException exception) {
+            throw new NotFoundException(exception.getMessage());
         }
     }
 
@@ -59,18 +60,23 @@ public class JDBCHeroRepository implements HeroRepository {
                     JOIN_POWER_STATS_BY_NAME,
                     params,
                     new BeanPropertyRowMapper<>(JoinHeroPowerStatsByHeroNameResponse.class));
-        } catch (EmptyResultDataAccessException exception) {
+        } catch (DataAccessException exception) {
             throw new NotFoundException("on findById id not found");
         }
     }
 
     public List<Hero> findByName(String value) {
         final Map<String, Object> params = Map.of("value", "%" + value + "%");
-        return namedParameterJdbcTemplate.query(
-                FIND_HERO_BY_NAME,
-                params,
-                new BeanPropertyRowMapper<>(Hero.class)
-        );
+        try {
+            return namedParameterJdbcTemplate.query(
+                    FIND_HERO_BY_NAME,
+                    params,
+                    new BeanPropertyRowMapper<>(Hero.class)
+            );
+        }
+        catch (DataAccessException e) {
+            throw new NotFoundException(e.getMessage());
+        }
     }
 
 
@@ -82,26 +88,37 @@ public class JDBCHeroRepository implements HeroRepository {
                 "newPowerStatsId", hero.getPowerStatsId()
         );
 
-        int rowsAffected = namedParameterJdbcTemplate.update(UPDATE_HERO, params);
-        if (rowsAffected == 0) {
-            throw new NotFoundException("on update id not found");
+        try {
+            if (namedParameterJdbcTemplate.update(UPDATE_HERO, params) == 0) {
+                throw new NotFoundException("Can't find hero id");
+            }
+        }
+        catch (DataAccessException exception) {
+            throw new NotFoundException(exception.getMessage());
         }
     }
 
     @Override
     public List<Hero> findAll() {
-        return namedParameterJdbcTemplate.query(
-                FIND_ALL,
-                new BeanPropertyRowMapper<>(Hero.class));
+        try {
+            return namedParameterJdbcTemplate.query(
+                    FIND_ALL,
+                    new BeanPropertyRowMapper<>(Hero.class));
+        }
+        catch (DataAccessException e) {
+            throw new NotFoundException(e.getMessage());
+        }
     }
 
     public void deleteById(UUID id) {
-        final Map<String, Object> params = Map.of(
-                "id", id
-        );
-        int rowsAffected = namedParameterJdbcTemplate.update(DELETE_BY_ID, params);
-        if (rowsAffected == 0) {
-            throw new NotFoundException("on delete id not found");
+        final Map<String, Object> params = Map.of("id", id);
+        try {
+            if (namedParameterJdbcTemplate.update(DELETE_BY_ID, params) == 0) {
+                throw new NotFoundException();
+            }
+        }
+        catch (DataAccessException exception) {
+            throw new NotFoundException(exception.getMessage());
         }
     }
 

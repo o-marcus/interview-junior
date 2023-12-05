@@ -25,20 +25,20 @@ public class HeroController {
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> create(@Validated @RequestBody HeroRequest heroRequest) {
-        final UUID id = heroService.create(mapToHero(heroRequest));
+        final UUID id = heroService.create(HeroMapper.toHero(heroRequest));
         return created(URI.create(format("/api/v1/heroes/%s", id))).build();
     }
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<String> update(@PathVariable("id") UUID id, @Validated @RequestBody HeroRequest heroRequest) {
-        heroService.update(id, mapToHero(heroRequest));
+        heroService.update(id, HeroMapper.toHero(heroRequest));
         return ok().body("updated hero with sucess");
    }
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<HeroResponse> getHeroByID(@PathVariable("id") UUID id) {
         Hero hero = heroService.findById(id);
-        return ok(toHeroResponse(hero));
+        return ok(HeroMapper.toHeroResponse(hero));
     }
 
     @DeleteMapping(path = "/{id}")
@@ -52,29 +52,9 @@ public class HeroController {
         List<Hero> heroes = heroService.findHeroByName(name);
         var response = heroes
                 .stream()
-                .map(HeroController::toHeroResponse)
+                .map(HeroMapper::toHeroResponse)
                 .collect(Collectors.toList());
         return ok(response);
-    }
-
-    public static HeroResponse toHeroResponse(Hero hero) {
-        return HeroResponse.builder()
-                .name(hero.getName())
-                .powerStatsId(hero.getPowerStatsId())
-                .race(hero.getRace())
-                .updatedAt(hero.getUpdatedAt())
-                .createdAt(hero.getCreatedAt())
-                .enabled(hero.isEnabled())
-                .build();
-    }
-
-    private Hero mapToHero(HeroRequest heroRequest) {
-        return Hero.builder()
-                .name(heroRequest.getName())
-                .race(heroRequest.getRace())
-                .powerStatsId(heroRequest.getStats())
-                .enabled(true)
-                .build();
     }
 
 }
