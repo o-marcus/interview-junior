@@ -1,8 +1,0 @@
-br\com\gubee\interview\core\features\util\TestFactory.class
-br\com\gubee\interview\core\features\hero\HeroControllerTestEndpointIT.class
-br\com\gubee\interview\core\features\util\Util.class
-br\com\gubee\interview\core\features\compareheroes\CompareHeroesControllerTest.class
-br\com\gubee\interview\core\features\hero\BaseTestConfiguration.class
-br\com\gubee\interview\core\features\hero\HeroControllerTest.class
-br\com\gubee\interview\core\features\powerstats\PowerStatsControllerTest.class
-br\com\gubee\interview\core\features\compareheroes\CompareHeroServiceTest.class
