@@ -1,6 +1,5 @@
 package br.com.gubee.interview.core.features.powerstats.stub;
 
-import br.com.gubee.interview.core.features.powerstats.PowerStatsRepository;
 import br.com.gubee.interview.model.powerstats.PowerStats;
 import java.util.ArrayList;
 import java.util.List;
