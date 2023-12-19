@@ -5,6 +5,7 @@ import br.com.gubee.interview.model.Hero;
 import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
 import br.com.gubee.interview.port.spi.hero.HeroRepository;
 import br.com.gubee.interview.port.spi.resources.JoinHeroPowerStatsByHeroName;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -13,8 +14,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-@RequiredArgsConstructor
-public class JDBCHeroRepository implements HeroRepository, GetPowerStatsHeroPort {
+@AllArgsConstructor
+public class JDBCHeroRepository implements HeroRepository {
 
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 

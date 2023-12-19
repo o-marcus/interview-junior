@@ -1,10 +1,11 @@
 package br.com.gubee.interview.port.spi.stub;
 
+import br.com.gubee.interview.enums.Race;
+import br.com.gubee.interview.model.Hero;
 import br.com.gubee.interview.model.PowerStats;
-import br.com.gubee.interview.model.enums.Race;
-import br.com.gubee.interview.model.hero.Hero;
-import br.com.gubee.interview.model.hero.HeroRepository;
-import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
+import br.com.gubee.interview.port.spi.hero.HeroRepository;
+import br.com.gubee.interview.port.spi.resources.JoinHeroPowerStatsByHeroName;
+
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,10 +65,10 @@ public class StubHeroRepository implements HeroRepository {
     }
 
     @Override
-    public JoinHeroPowerStatsByHeroNameResponse findByNameJoinPowerStats(String name) {
+    public JoinHeroPowerStatsByHeroName findByNameJoinPowerStats(String name) {
         Hero found = findByName(name).get(0);
         PowerStats stats = stubStats.findById(found.getPowerStatsId());
-        return JoinHeroPowerStatsByHeroNameResponse
+        return JoinHeroPowerStatsByHeroName
                 .builder()
                 .id(found.getId())
                 .dexterity(stats.getDexterity())

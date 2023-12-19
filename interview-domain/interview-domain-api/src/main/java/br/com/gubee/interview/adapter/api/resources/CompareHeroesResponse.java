@@ -1,6 +1,5 @@
 package br.com.gubee.interview.adapter.api.resources;
 
-import br.com.gubee.interview.web.resources.powerstats.PowerStatsResponse;
 import lombok.*;
 
 import java.util.UUID;

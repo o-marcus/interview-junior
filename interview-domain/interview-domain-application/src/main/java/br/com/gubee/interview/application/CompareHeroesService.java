@@ -4,9 +4,10 @@ import br.com.gubee.interview.adapter.api.CompareHeroesUseCase;
 import br.com.gubee.interview.adapter.api.resources.CompareHeroesResponse;
 import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
 import br.com.gubee.interview.port.spi.resources.JoinHeroPowerStatsByHeroName;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class CompareHeroesService implements CompareHeroesUseCase {
 
     private final GetPowerStatsHeroPort repository;

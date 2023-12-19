@@ -3,7 +3,7 @@ package br.com.gubee.interview.persistence.adapter.powerstats;
 import br.com.gubee.interview.persistence.adapter.exception.NotFoundException;
 import br.com.gubee.interview.model.PowerStats;
 import br.com.gubee.interview.port.spi.powerstats.PowerStatsRepository;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
@@ -12,23 +12,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class JDBCPowerStatsRepository
         implements PowerStatsRepository {
-
-    private static final String CREATE_POWER_STATS_QUERY = "INSERT INTO power_stats" +
-        " (strength, agility, dexterity, intelligence)" +
-        " VALUES (:strength, :agility, :dexterity, :intelligence) RETURNING id";
-
-    private static final String FIND_POWER_STATS_BY_ID =
-            "SELECT * FROM power_stats WHERE id = :id";
-
-    private static final String FIND_ALL =
-            "SELECT * FROM power_stats";
-
-    private static final String DELETE_BY_ID =
-            "DELETE FROM power_stats WHERE id = :id";
-
 
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
@@ -48,7 +34,7 @@ public class JDBCPowerStatsRepository
 
     public PowerStats findById(UUID id) {
         try {
-            final Map<String, Object> params = Map.of("id", id);
+            Map<String, Object> params = Map.of("id", id);
             return namedParameterJdbcTemplate.queryForObject(
                     FIND_POWER_STATS_BY_ID,
                     params,
@@ -68,7 +54,7 @@ public class JDBCPowerStatsRepository
     }
 
     public void deleteById(UUID id) {
-        final Map<String, Object> params = Map.of(
+        Map<String, Object> params = Map.of(
                 "id", id
         );
         int rowsAffected = namedParameterJdbcTemplate.update(DELETE_BY_ID, params);
@@ -76,5 +62,19 @@ public class JDBCPowerStatsRepository
             throw new NotFoundException("on delete id not found");
         }
     }
+
+    private static final String CREATE_POWER_STATS_QUERY = "INSERT INTO power_stats" +
+            " (strength, agility, dexterity, intelligence)" +
+            " VALUES (:strength, :agility, :dexterity, :intelligence) RETURNING id";
+
+    private static final String FIND_POWER_STATS_BY_ID =
+            "SELECT * FROM power_stats WHERE id = :id";
+
+    private static final String FIND_ALL =
+            "SELECT * FROM power_stats";
+
+    private static final String DELETE_BY_ID =
+            "DELETE FROM power_stats WHERE id = :id";
+
 
 }
