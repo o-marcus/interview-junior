@@ -43,6 +43,8 @@
     <modules>
         <module>core</module>
         <module>model</module>
+        <module>interview-infra</module>
+        <module>interview-domain</module>
     </modules>
 
     <dependencyManagement>
