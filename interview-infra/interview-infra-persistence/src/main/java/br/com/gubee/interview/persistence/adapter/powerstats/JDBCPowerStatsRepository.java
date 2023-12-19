@@ -2,13 +2,13 @@ package br.com.gubee.interview.persistence.adapter.powerstats;
 
 import br.com.gubee.interview.model.powerstats.PowerStats;
 import br.com.gubee.interview.model.powerstats.PowerStatsRepository;
+import br.com.gubee.interview.persistence.exception.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;

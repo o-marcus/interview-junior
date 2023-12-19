@@ -1,11 +1,10 @@
 package br.com.gubee.interview.port.spi.stub;
 
+import br.com.gubee.interview.model.PowerStats;
 import br.com.gubee.interview.model.enums.Race;
 import br.com.gubee.interview.model.hero.Hero;
 import br.com.gubee.interview.model.hero.HeroRepository;
 import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
-import br.com.gubee.interview.model.powerstats.PowerStats;
-
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;

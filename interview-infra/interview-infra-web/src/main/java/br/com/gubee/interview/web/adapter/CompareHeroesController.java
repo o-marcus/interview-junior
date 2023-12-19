@@ -1,6 +1,7 @@
 package br.com.gubee.interview.web.adapter;
 
-import br.com.gubee.interview.web.resources.comparehero.CompareHeroesResponse;
+import br.com.gubee.interview.port.api.CompareHeroesUseCase;
+import br.com.gubee.interview.port.api.resources.CompareHeroesResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

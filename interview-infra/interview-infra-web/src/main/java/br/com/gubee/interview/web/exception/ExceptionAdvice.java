@@ -1,5 +1,6 @@
 package br.com.gubee.interview.web.exception;
 
+import br.com.gubee.interview.persistence.exception.NotFoundException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

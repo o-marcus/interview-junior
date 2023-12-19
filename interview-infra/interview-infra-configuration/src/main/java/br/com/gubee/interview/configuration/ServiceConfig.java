@@ -1,5 +1,7 @@
 package br.com.gubee.interview.configuration;
 
+import br.com.gubee.interview.application.DatabaseHeroService;
+import br.com.gubee.interview.application.DatabasePowerStatsService;
 import br.com.gubee.interview.port.api.HeroService;
 import br.com.gubee.interview.port.api.PowerStatsService;
 import org.springframework.context.annotation.Bean;
@@ -16,4 +18,5 @@ public class ServiceConfig {
     public PowerStatsService powerStatsService() {
         return new DatabasePowerStatsService();
     }
+
 }

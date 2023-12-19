@@ -9,7 +9,6 @@ import java.util.TimeZone;
 
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
-
     @PostConstruct
     void init() {
         TimeZone.setDefault(TimeZone.getTimeZone(ZoneOffset.UTC));

@@ -1,8 +1,7 @@
 package br.com.gubee.interview.web.resources.powerstats;
 
-import br.com.gubee.interview.model.powerstats.PowerStats;
-import br.com.gubee.interview.model.powerstats.dto.PowerStatsRequest;
-
+import br.com.gubee.interview.model.PowerStats;
+import br.com.gubee.interview.web.resources.powerstats.PowerStatsRequest;
 public class PowerStatsMapper {
 
     public static PowerStats toPowerStats(PowerStatsRequest powerStats) {

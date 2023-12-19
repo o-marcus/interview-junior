@@ -1,10 +1,9 @@
 package br.com.gubee.interview.web.adapter.hero;
 
-import br.com.gubee.interview.core.adapter.in.web.HeroController;
-import br.com.gubee.interview.core.adapter.out.persistence.hero.DatabaseHeroService;
-import br.com.gubee.interview.core.exception.NotFoundException;
-import br.com.gubee.interview.core.features.util.TestFactory;
-import br.com.gubee.interview.model.hero.Hero;
+import br.com.gubee.interview.application.DatabaseHeroService;
+import br.com.gubee.interview.model.Hero;
+import br.com.gubee.interview.persistence.exception.NotFoundException;
+import br.com.gubee.interview.util.TestFactory;
 import br.com.gubee.interview.web.adapter.HeroController;
 import br.com.gubee.interview.web.resources.hero.HeroRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;

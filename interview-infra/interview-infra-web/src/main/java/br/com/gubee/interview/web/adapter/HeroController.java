@@ -1,8 +1,8 @@
 package br.com.gubee.interview.web.adapter;
 
-import br.com.gubee.interview.core.adapter.out.persistence.hero.HeroMapper;
-import br.com.gubee.interview.model.hero.Hero;
-import br.com.gubee.interview.model.hero.HeroService;
+import br.com.gubee.interview.model.Hero;
+import br.com.gubee.interview.port.api.HeroService;
+import br.com.gubee.interview.web.resources.hero.HeroMapper;
 import br.com.gubee.interview.web.resources.hero.HeroRequest;
 import br.com.gubee.interview.web.resources.hero.HeroResponse;
 import lombok.RequiredArgsConstructor;

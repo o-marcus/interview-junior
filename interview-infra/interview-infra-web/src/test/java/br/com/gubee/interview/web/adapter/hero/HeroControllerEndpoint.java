@@ -1,11 +1,13 @@
 package br.com.gubee.interview.web.adapter.hero;
 
-import br.com.gubee.interview.model.hero.Hero;
-import br.com.gubee.interview.model.hero.HeroRepository;
-import br.com.gubee.interview.model.powerstats.PowerStatsRepository;
+import br.com.gubee.interview.model.Hero;
+import br.com.gubee.interview.persistence.exception.NotFoundException;
+import br.com.gubee.interview.port.spi.HeroRepository;
+import br.com.gubee.interview.port.spi.PowerStatsRepository;
 import br.com.gubee.interview.util.BaseTestConfiguration;
 import br.com.gubee.interview.util.TestFactory;
 import br.com.gubee.interview.util.Util;
+import br.com.gubee.interview.web.resources.hero.HeroMapper;
 import br.com.gubee.interview.web.resources.hero.HeroRequest;
 import br.com.gubee.interview.web.resources.hero.HeroResponse;
 import org.junit.jupiter.api.AfterEach;
@@ -15,13 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -140,8 +140,8 @@ class HeroControllerEndpoint extends BaseTestConfiguration {
         List<Hero> heroes = Stream.of("vanderson", "evandro", "ivan")
                 .map(name -> TestFactory.createHeroRequest(name, powerStatsId))
                 .map(HeroMapper::toHero)
-                .collect(Collectors.toList());
-        List<UUID> ids = heroes.stream().map(hero -> heroRepository.create(hero)).collect(Collectors.toList());
+                .toList();
+        List<UUID> ids = heroes.stream().map(hero -> heroRepository.create(hero)).toList();
         //  when
         ResultActions actions = perform(() -> get(BASE_PATH+"/search/van"));
         //  then

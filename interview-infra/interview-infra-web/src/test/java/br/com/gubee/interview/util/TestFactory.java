@@ -1,9 +1,9 @@
 package br.com.gubee.interview.util;
 
 import br.com.gubee.interview.enums.Race;
-import br.com.gubee.interview.model.hero.Hero;
+import br.com.gubee.interview.model.Hero;
+import br.com.gubee.interview.model.PowerStats;
 import br.com.gubee.interview.web.resources.hero.HeroRequest;
-import br.com.gubee.interview.model.powerstats.PowerStats;
 import br.com.gubee.interview.web.resources.powerstats.PowerStatsRequest;
 
 import java.util.Random;

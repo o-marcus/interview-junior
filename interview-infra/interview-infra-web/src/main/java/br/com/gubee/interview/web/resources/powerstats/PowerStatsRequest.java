@@ -17,7 +17,6 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @NoArgsConstructor(access = PRIVATE)
 public class PowerStatsRequest {
-
     @Min(value = 0, message = "message.powerstats.strength.min")
     @Max(value = 10, message = "message.powerstats.strength.max")
     @NotNull(message = "message.powerstats.strength.mandatory")

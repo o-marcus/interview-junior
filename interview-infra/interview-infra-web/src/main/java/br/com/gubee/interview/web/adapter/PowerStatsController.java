@@ -1,13 +1,12 @@
 package br.com.gubee.interview.web.adapter;
 
-import br.com.gubee.interview.core.features.powerstats.PowerStatsMapper;
-import br.com.gubee.interview.model.powerstats.PowerStatsService;
+import br.com.gubee.interview.port.api.PowerStatsService;
+import br.com.gubee.interview.web.resources.powerstats.PowerStatsMapper;
 import br.com.gubee.interview.web.resources.powerstats.PowerStatsRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import java.net.BindException;
 import java.net.URI;
 import java.util.UUID;
