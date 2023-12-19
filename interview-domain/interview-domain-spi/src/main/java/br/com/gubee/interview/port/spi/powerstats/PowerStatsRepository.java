@@ -1,4 +1,4 @@
-package br.com.gubee.interview.port.spi;
+package br.com.gubee.interview.port.spi.powerstats;
 
 import br.com.gubee.interview.model.PowerStats;
 

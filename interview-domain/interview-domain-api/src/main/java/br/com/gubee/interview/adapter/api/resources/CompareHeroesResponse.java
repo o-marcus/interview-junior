@@ -1,4 +1,4 @@
-package br.com.gubee.interview.port.api.resources;
+package br.com.gubee.interview.adapter.api.resources;
 
 import br.com.gubee.interview.web.resources.powerstats.PowerStatsResponse;
 import lombok.*;

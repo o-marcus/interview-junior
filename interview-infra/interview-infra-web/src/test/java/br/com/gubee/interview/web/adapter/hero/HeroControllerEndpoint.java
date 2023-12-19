@@ -2,8 +2,8 @@ package br.com.gubee.interview.web.adapter.hero;
 
 import br.com.gubee.interview.model.Hero;
 import br.com.gubee.interview.persistence.exception.NotFoundException;
-import br.com.gubee.interview.port.spi.HeroRepository;
-import br.com.gubee.interview.port.spi.PowerStatsRepository;
+import br.com.gubee.interview.port.spi.hero.HeroRepository;
+import br.com.gubee.interview.port.spi.powerstats.PowerStatsRepository;
 import br.com.gubee.interview.util.BaseTestConfiguration;
 import br.com.gubee.interview.util.TestFactory;
 import br.com.gubee.interview.util.Util;
@@ -20,7 +20,6 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;

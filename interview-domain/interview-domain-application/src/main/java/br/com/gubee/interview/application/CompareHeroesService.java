@@ -1,25 +1,23 @@
 package br.com.gubee.interview.application;
 
-import br.com.gubee.interview.port.api.CompareHeroesUseCase;
-import br.com.gubee.interview.port.api.resources.CompareHeroesResponse;
-import br.com.gubee.interview.port.spi.HeroRepository;
-import br.com.gubee.interview.web.resources.hero.JoinHeroPowerStatsByHeroNameResponse;
+import br.com.gubee.interview.adapter.api.CompareHeroesUseCase;
+import br.com.gubee.interview.adapter.api.resources.CompareHeroesResponse;
+import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
+import br.com.gubee.interview.port.spi.resources.JoinHeroPowerStatsByHeroName;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
-@Service
 @RequiredArgsConstructor
 public class CompareHeroesService implements CompareHeroesUseCase {
 
-    private final HeroRepository repository;
+    private final GetPowerStatsHeroPort repository;
 
     @Override
     public CompareHeroesResponse compare(String firstHero, String secondHero) {
 
-        JoinHeroPowerStatsByHeroNameResponse first =
+        JoinHeroPowerStatsByHeroName first =
                 repository.findByNameJoinPowerStats(firstHero);
 
-        JoinHeroPowerStatsByHeroNameResponse second =
+        JoinHeroPowerStatsByHeroName second =
                 repository.findByNameJoinPowerStats(secondHero);
 
         return CompareHeroesResponse

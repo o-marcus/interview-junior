@@ -1,27 +1,24 @@
 package br.com.gubee.interview.persistence.adapter.hero;
 
-import br.com.gubee.interview.model.hero.Hero;
-import br.com.gubee.interview.model.hero.HeroRepository;
-import br.com.gubee.interview.model.hero.dto.JoinHeroPowerStatsByHeroNameResponse;
-import br.com.gubee.interview.persistence.exception.NotFoundException;
+import br.com.gubee.interview.persistence.adapter.exception.NotFoundException;
+import br.com.gubee.interview.model.Hero;
+import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
+import br.com.gubee.interview.port.spi.hero.HeroRepository;
+import br.com.gubee.interview.port.spi.resources.JoinHeroPowerStatsByHeroName;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Primary;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-@Repository
-@Primary
 @RequiredArgsConstructor
-public class JDBCHeroRepository implements HeroRepository {
+public class JDBCHeroRepository implements HeroRepository, GetPowerStatsHeroPort {
 
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
+    @Override
     public UUID create(Hero hero) {
         try {
             final Map<String, Object> params = Map.of("name", hero.getName(),
@@ -51,13 +48,14 @@ public class JDBCHeroRepository implements HeroRepository {
         }
     }
 
-    public JoinHeroPowerStatsByHeroNameResponse findByNameJoinPowerStats(String name) {
+    @Override
+    public JoinHeroPowerStatsByHeroName findByNameJoinPowerStats(String name) {
         try {
             final Map<String, Object> params = Map.of("name", name);
             return namedParameterJdbcTemplate.queryForObject(
                     JOIN_POWER_STATS_BY_NAME,
                     params,
-                    new BeanPropertyRowMapper<>(JoinHeroPowerStatsByHeroNameResponse.class));
+                    new BeanPropertyRowMapper<>(JoinHeroPowerStatsByHeroName.class));
         } catch (DataAccessException exception) {
             throw new NotFoundException("on findById id not found");
         }

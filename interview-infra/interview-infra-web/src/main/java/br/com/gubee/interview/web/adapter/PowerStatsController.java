@@ -1,6 +1,6 @@
 package br.com.gubee.interview.web.adapter;
 
-import br.com.gubee.interview.port.api.PowerStatsService;
+import br.com.gubee.interview.adapter.api.PowerStatsService;
 import br.com.gubee.interview.web.resources.powerstats.PowerStatsMapper;
 import br.com.gubee.interview.web.resources.powerstats.PowerStatsRequest;
 import lombok.RequiredArgsConstructor;

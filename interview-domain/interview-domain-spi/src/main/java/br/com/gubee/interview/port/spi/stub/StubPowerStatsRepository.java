@@ -1,7 +1,7 @@
 package br.com.gubee.interview.port.spi.stub;
 
 import br.com.gubee.interview.model.PowerStats;
-import br.com.gubee.interview.port.spi.PowerStatsRepository;
+import br.com.gubee.interview.port.spi.powerstats.PowerStatsRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

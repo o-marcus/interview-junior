@@ -1,9 +1,9 @@
-package br.com.gubee.interview.configuration;
+package br.com.gubee.interview.configuration.service;
 
 import br.com.gubee.interview.application.DatabaseHeroService;
 import br.com.gubee.interview.application.DatabasePowerStatsService;
-import br.com.gubee.interview.port.api.HeroService;
-import br.com.gubee.interview.port.api.PowerStatsService;
+import br.com.gubee.interview.adapter.api.HeroService;
+import br.com.gubee.interview.adapter.api.PowerStatsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

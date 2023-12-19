@@ -1,7 +1,4 @@
-package br.com.gubee.interview.persistence.exception;
-
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+package br.com.gubee.interview.persistence.adapter.exception;
 
 public class NotFoundException extends RuntimeException {
 

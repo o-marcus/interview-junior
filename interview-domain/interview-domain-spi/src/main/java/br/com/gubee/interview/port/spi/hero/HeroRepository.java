@@ -1,8 +1,6 @@
-package br.com.gubee.interview.port.spi;
+package br.com.gubee.interview.port.spi.hero;
 
 import br.com.gubee.interview.model.Hero;
-import br.com.gubee.interview.web.resources.hero.JoinHeroPowerStatsByHeroNameResponse;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -13,5 +11,4 @@ public interface HeroRepository {
     void updateHero(UUID id, Hero hero);
     List<Hero> findAll();
     public void deleteById(UUID id);
-    JoinHeroPowerStatsByHeroNameResponse findByNameJoinPowerStats(String name);
 }

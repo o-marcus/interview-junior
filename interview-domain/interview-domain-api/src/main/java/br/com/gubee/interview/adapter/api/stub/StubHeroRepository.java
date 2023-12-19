@@ -1,4 +1,4 @@
-package br.com.gubee.interview.port.api.stub;
+package br.com.gubee.interview.adapter.api.stub;
 
 
 import br.com.gubee.interview.enums.Race;

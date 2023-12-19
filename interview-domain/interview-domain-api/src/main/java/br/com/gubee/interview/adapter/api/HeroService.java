@@ -1,4 +1,4 @@
-package br.com.gubee.interview.port.api;
+package br.com.gubee.interview.adapter.api;
 
 import br.com.gubee.interview.model.Hero;
 import java.util.List;

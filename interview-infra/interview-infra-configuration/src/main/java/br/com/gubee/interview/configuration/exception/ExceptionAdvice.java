@@ -1,6 +1,6 @@
-package br.com.gubee.interview.web.exception;
+package br.com.gubee.interview.configuration.exception;
 
-import br.com.gubee.interview.persistence.exception.NotFoundException;
+import br.com.gubee.interview.persistence.adapter.exception.NotFoundException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,10 +18,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-
 import java.util.List;
 import java.util.stream.Collectors;
-
 import static org.springframework.http.HttpStatus.*;
 import static org.springframework.http.ResponseEntity.status;
 

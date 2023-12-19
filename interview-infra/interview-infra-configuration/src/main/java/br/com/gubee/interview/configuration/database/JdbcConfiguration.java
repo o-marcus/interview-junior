@@ -1,4 +1,4 @@
-package br.com.gubee.interview.persistence.configuration;
+package br.com.gubee.interview.configuration.database;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
