@@ -43,6 +43,7 @@
     <modules>
         <module>interview-infra</module>
         <module>interview-domain</module>
+        <module>interview-infra/interview-infra-adapter</module>
     </modules>
 
     <dependencyManagement>

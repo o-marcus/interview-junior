@@ -1,11 +1,9 @@
 package br.com.gubee.interview.application;
 
 import br.com.gubee.interview.model.Hero;
-import br.com.gubee.interview.adapter.api.HeroService;
+import br.com.gubee.interview.port.api.HeroService;
 import br.com.gubee.interview.port.spi.hero.HeroRepository;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.UUID;

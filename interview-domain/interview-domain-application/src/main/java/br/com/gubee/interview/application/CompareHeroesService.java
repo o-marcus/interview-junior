@@ -1,11 +1,10 @@
 package br.com.gubee.interview.application;
 
-import br.com.gubee.interview.adapter.api.CompareHeroesUseCase;
-import br.com.gubee.interview.adapter.api.resources.CompareHeroesResponse;
+import br.com.gubee.interview.model.CompareHero;
+import br.com.gubee.interview.port.api.CompareHeroesUseCase;
 import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
-import br.com.gubee.interview.port.spi.resources.JoinHeroPowerStatsByHeroName;
+import br.com.gubee.interview.port.spi.entities.HeroPowerStats;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @AllArgsConstructor
 public class CompareHeroesService implements CompareHeroesUseCase {
@@ -13,15 +12,15 @@ public class CompareHeroesService implements CompareHeroesUseCase {
     private final GetPowerStatsHeroPort repository;
 
     @Override
-    public CompareHeroesResponse compare(String firstHero, String secondHero) {
+    public CompareHero compare(String firstHero, String secondHero) {
 
-        JoinHeroPowerStatsByHeroName first =
+        HeroPowerStats first =
                 repository.findByNameJoinPowerStats(firstHero);
 
-        JoinHeroPowerStatsByHeroName second =
+        HeroPowerStats second =
                 repository.findByNameJoinPowerStats(secondHero);
 
-        return CompareHeroesResponse
+        return CompareHero
                 .builder()
                 .first(first.getId())
                 .second(second.getId())

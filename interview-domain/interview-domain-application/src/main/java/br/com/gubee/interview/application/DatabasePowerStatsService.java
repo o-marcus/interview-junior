@@ -1,7 +1,7 @@
 package br.com.gubee.interview.application;
 
 import br.com.gubee.interview.model.PowerStats;
-import br.com.gubee.interview.adapter.api.PowerStatsService;
+import br.com.gubee.interview.port.api.PowerStatsService;
 import br.com.gubee.interview.port.spi.powerstats.PowerStatsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,14 +4,10 @@ import br.com.gubee.interview.persistence.adapter.hero.JDBCHeroRepository;
 import br.com.gubee.interview.persistence.adapter.powerstats.JDBCPowerStatsRepository;
 import br.com.gubee.interview.port.spi.hero.HeroRepository;
 import br.com.gubee.interview.port.spi.powerstats.PowerStatsRepository;
-import org.apache.logging.log4j.core.config.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-
-import javax.sql.DataSource;
 
 @Configuration
 public class DatabaseConfig {

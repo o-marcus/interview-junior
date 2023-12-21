@@ -1,7 +1,7 @@
 package br.com.gubee.interview.port.spi.comparehero;
 
-import br.com.gubee.interview.port.spi.resources.JoinHeroPowerStatsByHeroName;
+import br.com.gubee.interview.port.spi.entities.HeroPowerStats;
 
 public interface GetPowerStatsHeroPort {
-    JoinHeroPowerStatsByHeroName findByNameJoinPowerStats(String name);
+    HeroPowerStats findByNameJoinPowerStats(String name);
 }

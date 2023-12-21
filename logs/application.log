@@ -1885,7 +1885,7 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 [INFO ] [2023-12-19T18:41:28,023] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
 [INFO ] [2023-12-19T18:41:28,780] [main] [[/]] Initializing Spring embedded WebApplicationContext 
 [INFO ] [2023-12-19T18:41:28,781] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 24692 ms 
-[WARN ] [2023-12-19T18:41:29,247] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[WARN ] [2023-12-19T18:41:29,247] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 [INFO ] [2023-12-19T18:41:29,733] [main] [StandardService] Stopping service [Tomcat] 
 [INFO ] [2023-12-19T18:41:29,922] [main] [ConditionEvaluationReportLoggingListener] 
 
@@ -1898,12 +1898,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in br.com.gubee.interview.web.adapter.CompareHeroesController required a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' that could not be found.
+Parameter 0 of constructor in br.com.gubee.interview.web.adapter.in.comparehero.CompareHeroesController required a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' in your configuration.
+Consider defining a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' in your configuration.
  
 [INFO ] [2023-12-19T18:45:06,343] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
 [INFO ] [2023-12-19T18:45:07,108] [main] [Application] Starting Application using Java 17.0.6 on DESKTOP-J38CSCD with PID 5816 (C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\interview-junior) 
@@ -1917,7 +1917,7 @@ Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHero
 [INFO ] [2023-12-19T18:45:19,309] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
 [INFO ] [2023-12-19T18:45:19,924] [main] [[/]] Initializing Spring embedded WebApplicationContext 
 [INFO ] [2023-12-19T18:45:19,925] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 12059 ms 
-[WARN ] [2023-12-19T18:45:20,292] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[WARN ] [2023-12-19T18:45:20,292] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 [INFO ] [2023-12-19T18:45:20,728] [main] [StandardService] Stopping service [Tomcat] 
 [INFO ] [2023-12-19T18:45:20,815] [main] [ConditionEvaluationReportLoggingListener] 
 
@@ -1930,12 +1930,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in br.com.gubee.interview.web.adapter.CompareHeroesController required a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' that could not be found.
+Parameter 0 of constructor in br.com.gubee.interview.web.adapter.in.comparehero.CompareHeroesController required a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' in your configuration.
+Consider defining a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' in your configuration.
  
 [INFO ] [2023-12-19T18:46:40,148] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
 [INFO ] [2023-12-19T18:46:40,534] [main] [Application] Starting Application using Java 17.0.6 on DESKTOP-J38CSCD with PID 15200 (C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\interview-junior) 
@@ -1985,7 +1985,7 @@ Consider the following:
 [INFO ] [2023-12-19T18:52:25,403] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
 [INFO ] [2023-12-19T18:52:26,070] [main] [[/]] Initializing Spring embedded WebApplicationContext 
 [INFO ] [2023-12-19T18:52:26,071] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 12081 ms 
-[WARN ] [2023-12-19T18:52:26,494] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[WARN ] [2023-12-19T18:52:26,494] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 [INFO ] [2023-12-19T18:52:26,949] [main] [StandardService] Stopping service [Tomcat] 
 [INFO ] [2023-12-19T18:52:27,096] [main] [ConditionEvaluationReportLoggingListener] 
 
@@ -1998,12 +1998,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in br.com.gubee.interview.web.adapter.CompareHeroesController required a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' that could not be found.
+Parameter 0 of constructor in br.com.gubee.interview.web.adapter.in.comparehero.CompareHeroesController required a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' in your configuration.
+Consider defining a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' in your configuration.
  
 [INFO ] [2023-12-19T18:55:39,744] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
 [INFO ] [2023-12-19T18:55:40,134] [main] [Application] Starting Application using Java 17.0.6 on DESKTOP-J38CSCD with PID 9328 (C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\interview-junior) 
@@ -2017,7 +2017,7 @@ Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHero
 [INFO ] [2023-12-19T18:55:49,259] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
 [INFO ] [2023-12-19T18:55:50,195] [main] [[/]] Initializing Spring embedded WebApplicationContext 
 [INFO ] [2023-12-19T18:55:50,196] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 9667 ms 
-[WARN ] [2023-12-19T18:55:50,586] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[WARN ] [2023-12-19T18:55:50,586] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 [INFO ] [2023-12-19T18:55:51,026] [main] [StandardService] Stopping service [Tomcat] 
 [INFO ] [2023-12-19T18:55:51,123] [main] [ConditionEvaluationReportLoggingListener] 
 
@@ -2030,12 +2030,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in br.com.gubee.interview.web.adapter.CompareHeroesController required a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' that could not be found.
+Parameter 0 of constructor in br.com.gubee.interview.web.adapter.in.comparehero.CompareHeroesController required a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' in your configuration.
+Consider defining a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' in your configuration.
  
 [INFO ] [2023-12-19T18:56:53,639] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
 [INFO ] [2023-12-19T18:56:54,035] [main] [Application] Starting Application using Java 17.0.6 on DESKTOP-J38CSCD with PID 15736 (C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\interview-junior) 
@@ -2049,7 +2049,7 @@ Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHero
 [INFO ] [2023-12-19T18:57:04,766] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
 [INFO ] [2023-12-19T18:57:05,252] [main] [[/]] Initializing Spring embedded WebApplicationContext 
 [INFO ] [2023-12-19T18:57:05,253] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 10823 ms 
-[WARN ] [2023-12-19T18:57:05,617] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[WARN ] [2023-12-19T18:57:05,617] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesController' defined in file [C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-web\target\classes\br\com\gubee\interview\web\adapter\CompareHeroesController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 [INFO ] [2023-12-19T18:57:06,063] [main] [StandardService] Stopping service [Tomcat] 
 [INFO ] [2023-12-19T18:57:06,153] [main] [ConditionEvaluationReportLoggingListener] 
 
@@ -2062,12 +2062,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in br.com.gubee.interview.web.adapter.CompareHeroesController required a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' that could not be found.
+Parameter 0 of constructor in br.com.gubee.interview.web.adapter.in.comparehero.CompareHeroesController required a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'br.com.gubee.interview.adapter.api.CompareHeroesUseCase' in your configuration.
+Consider defining a bean of type 'br.com.gubee.interview.port.api.CompareHeroesUseCase' in your configuration.
  
 [INFO ] [2023-12-19T18:57:47,129] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
 [INFO ] [2023-12-19T18:57:47,627] [main] [Application] Starting Application using Java 17.0.6 on DESKTOP-J38CSCD with PID 7192 (C:\Users\marcu\Desktop\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\interview-junior) 

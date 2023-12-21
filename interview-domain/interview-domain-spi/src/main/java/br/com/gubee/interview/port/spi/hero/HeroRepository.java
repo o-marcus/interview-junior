@@ -2,7 +2,6 @@ package br.com.gubee.interview.port.spi.hero;
 
 import br.com.gubee.interview.model.Hero;
 import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
-
 import java.util.List;
 import java.util.UUID;
 
