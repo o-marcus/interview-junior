@@ -44,6 +44,7 @@
         <module>interview-infra</module>
         <module>interview-domain</module>
         <module>interview-commom</module>
+        <module>interview-infra/interview-infra-web</module>
         <module>interview-infra/interview-infra-persistence</module>
     </modules>
 

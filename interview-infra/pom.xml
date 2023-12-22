@@ -12,7 +12,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>interview-infra-configuration</module>
-        <module>interview-infra-adapter</module>
+        <module>interview-infra-persistence</module>
+        <module>interview-infra-web</module>
     </modules>
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>

@@ -6,7 +6,7 @@ import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
 import java.util.List;
 import java.util.UUID;
 
-public interface HeroRepository extends GetPowerStatsHeroPort {
+public interface HeroRepository {
     UUID create(Hero hero);
     Hero findById(UUID id);
     List<Hero> findByName(String value);

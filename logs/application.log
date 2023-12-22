@@ -28,3 +28,334 @@
 [INFO ] [2023-12-22T05:24:43,981] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 6 ms 
 [INFO ] [2023-12-22T05:25:31,837] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
 [INFO ] [2023-12-22T05:25:31,848] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-12-22T06:25:21,772] [main] [Application] Starting Application using Java 17.0.6 with PID 16880 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:25:21,906] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-12-22T06:25:36,059] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-22T06:25:36,473] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 315 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-22T06:25:54,185] [main] [TomcatWebServer] Tomcat initialized with port 8080 (http) 
+[INFO ] [2023-12-22T06:25:54,402] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-12-22T06:25:54,407] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-12-22T06:25:54,465] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-12-22T06:25:54,471] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.17] 
+[INFO ] [2023-12-22T06:25:55,758] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-12-22T06:25:55,778] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 31597 ms 
+[WARN ] [2023-12-22T06:25:57,310] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesService' defined in file [C:\Users\marcu\Desktop\dg\interview-junior\interview-domain\interview-domain-application\target\classes\br\com\gubee\interview\application\CompareHeroesService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[INFO ] [2023-12-22T06:26:00,801] [main] [StandardService] Stopping service [Tomcat] 
+[INFO ] [2023-12-22T06:26:01,147] [main] [ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+[ERROR] [2023-12-22T06:26:01,669] [main] [LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.gubee.interview.application.CompareHeroesService required a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' in your configuration.
+ 
+[INFO ] [2023-12-22T06:30:41,675] [main] [Application] Starting Application using Java 17.0.6 with PID 9972 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:30:41,779] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-12-22T06:30:54,973] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-22T06:30:55,985] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 923 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-22T06:31:06,308] [main] [TomcatWebServer] Tomcat initialized with port 8080 (http) 
+[INFO ] [2023-12-22T06:31:06,422] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-12-22T06:31:06,424] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-12-22T06:31:06,444] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-12-22T06:31:06,446] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.17] 
+[INFO ] [2023-12-22T06:31:06,962] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-12-22T06:31:06,976] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 24683 ms 
+[WARN ] [2023-12-22T06:31:07,542] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesService' defined in file [C:\Users\marcu\Desktop\dg\interview-junior\interview-domain\interview-domain-application\target\classes\br\com\gubee\interview\application\CompareHeroesService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[INFO ] [2023-12-22T06:31:08,319] [main] [StandardService] Stopping service [Tomcat] 
+[INFO ] [2023-12-22T06:31:08,484] [main] [ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+[ERROR] [2023-12-22T06:31:08,675] [main] [LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.gubee.interview.application.CompareHeroesService required a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' in your configuration.
+ 
+[INFO ] [2023-12-22T06:34:11,918] [main] [Application] Starting Application using Java 17.0.6 with PID 12564 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:34:12,028] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-12-22T06:34:19,640] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-22T06:34:19,852] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 172 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-22T06:34:24,627] [main] [TomcatWebServer] Tomcat initialized with port 8080 (http) 
+[INFO ] [2023-12-22T06:34:24,735] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-12-22T06:34:24,738] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-12-22T06:34:24,755] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-12-22T06:34:24,758] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.17] 
+[INFO ] [2023-12-22T06:34:25,189] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-12-22T06:34:25,199] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 12169 ms 
+[WARN ] [2023-12-22T06:34:25,714] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesService' defined in file [C:\Users\marcu\Desktop\dg\interview-junior\interview-domain\interview-domain-application\target\classes\br\com\gubee\interview\application\CompareHeroesService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[INFO ] [2023-12-22T06:34:26,288] [main] [StandardService] Stopping service [Tomcat] 
+[INFO ] [2023-12-22T06:34:26,405] [main] [ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+[ERROR] [2023-12-22T06:34:26,575] [main] [LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.gubee.interview.application.CompareHeroesService required a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' in your configuration.
+ 
+[INFO ] [2023-12-22T06:42:20,701] [main] [Application] Starting Application using Java 17.0.6 with PID 12040 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:42:20,919] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-12-22T06:42:27,697] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-22T06:42:27,942] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 215 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-22T06:42:32,875] [main] [TomcatWebServer] Tomcat initialized with port 8080 (http) 
+[INFO ] [2023-12-22T06:42:32,951] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-12-22T06:42:32,952] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-12-22T06:42:32,991] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-12-22T06:42:32,993] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.17] 
+[INFO ] [2023-12-22T06:42:33,493] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-12-22T06:42:33,504] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 11999 ms 
+[WARN ] [2023-12-22T06:42:34,067] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesService' defined in file [C:\Users\marcu\Desktop\dg\interview-junior\interview-domain\interview-domain-application\target\classes\br\com\gubee\interview\application\CompareHeroesService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[INFO ] [2023-12-22T06:42:34,649] [main] [StandardService] Stopping service [Tomcat] 
+[INFO ] [2023-12-22T06:42:34,746] [main] [ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+[ERROR] [2023-12-22T06:42:34,945] [main] [LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.gubee.interview.application.CompareHeroesService required a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' in your configuration.
+ 
+[INFO ] [2023-12-22T06:45:17,037] [main] [Application] Starting Application using Java 17.0.6 with PID 16096 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:45:17,239] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-12-22T06:45:27,536] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-22T06:45:27,750] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 153 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-22T06:45:32,576] [main] [TomcatWebServer] Tomcat initialized with port 8080 (http) 
+[INFO ] [2023-12-22T06:45:32,653] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-12-22T06:45:32,656] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-12-22T06:45:32,673] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-12-22T06:45:32,676] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.17] 
+[INFO ] [2023-12-22T06:45:33,362] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-12-22T06:45:33,372] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15203 ms 
+[WARN ] [2023-12-22T06:45:34,008] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesService' defined in file [C:\Users\marcu\Desktop\dg\interview-junior\interview-domain\interview-domain-application\target\classes\br\com\gubee\interview\application\CompareHeroesService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[INFO ] [2023-12-22T06:45:34,660] [main] [StandardService] Stopping service [Tomcat] 
+[INFO ] [2023-12-22T06:45:34,826] [main] [ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+[ERROR] [2023-12-22T06:45:35,036] [main] [LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.gubee.interview.application.CompareHeroesService required a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' in your configuration.
+ 
+[INFO ] [2023-12-22T06:47:06,379] [main] [Application] Starting Application using Java 17.0.6 with PID 11172 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:47:06,469] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-12-22T06:47:11,886] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-12-22T06:47:12,130] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 204 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-12-22T06:47:18,126] [main] [TomcatWebServer] Tomcat initialized with port 8080 (http) 
+[INFO ] [2023-12-22T06:47:18,207] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-12-22T06:47:18,210] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-12-22T06:47:18,230] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-12-22T06:47:18,232] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.17] 
+[INFO ] [2023-12-22T06:47:18,704] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-12-22T06:47:18,723] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 11747 ms 
+[WARN ] [2023-12-22T06:47:19,234] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compareHeroesService' defined in file [C:\Users\marcu\Desktop\dg\interview-junior\interview-domain\interview-domain-application\target\classes\br\com\gubee\interview\application\CompareHeroesService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[INFO ] [2023-12-22T06:47:19,774] [main] [StandardService] Stopping service [Tomcat] 
+[INFO ] [2023-12-22T06:47:19,872] [main] [ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+[ERROR] [2023-12-22T06:47:20,058] [main] [LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.gubee.interview.application.CompareHeroesService required a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort' in your configuration.
+ 
+[INFO ] [2023-12-22T06:56:41,684] [background-preinit] [Version] HV000001: Hibernate Validator 8.0.1.Final 
+[INFO ] [2023-12-22T06:56:42,976] [main] [Application] Starting Application using Java 17.0.6 with PID 9488 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:56:43,053] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[WARN ] [2023-12-22T06:56:49,828] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application] 
+[ERROR] [2023-12-22T06:56:53,546] [main] [SpringApplication] Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) [spring-boot-3.2.1.jar:3.2.1]
+	at br.com.gubee.interview.Application.main(Application.java:11) [classes/:?]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'jdbcConfiguration' for bean class [br.com.gubee.interview.jdbc.JdbcConfiguration] conflicts with existing, non-compatible bean definition of same name and class [br.com.gubee.interview.web.adapter.in.jdbc.JdbcConfiguration]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:306) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.2.jar:6.1.2]
+	... 13 more
+[INFO ] [2023-12-22T06:57:39,114] [background-preinit] [Version] HV000001: Hibernate Validator 8.0.1.Final 
+[INFO ] [2023-12-22T06:57:39,546] [main] [Application] Starting Application using Java 17.0.6 with PID 10148 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:57:39,580] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[WARN ] [2023-12-22T06:57:41,616] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application] 
+[ERROR] [2023-12-22T06:57:42,902] [main] [SpringApplication] Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) [spring-boot-3.2.1.jar:3.2.1]
+	at br.com.gubee.interview.Application.main(Application.java:11) [classes/:?]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'jdbcConfiguration' for bean class [br.com.gubee.interview.jdbc.JdbcConfiguration] conflicts with existing, non-compatible bean definition of same name and class [br.com.gubee.interview.web.adapter.in.jdbc.JdbcConfiguration]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:306) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.2.jar:6.1.2]
+	... 13 more
+[INFO ] [2023-12-22T06:58:43,590] [background-preinit] [Version] HV000001: Hibernate Validator 8.0.1.Final 
+[INFO ] [2023-12-22T06:58:44,111] [main] [Application] Starting Application using Java 17.0.6 with PID 16516 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T06:58:44,143] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[WARN ] [2023-12-22T06:58:45,884] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application] 
+[ERROR] [2023-12-22T06:58:47,576] [main] [SpringApplication] Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) [spring-boot-3.2.1.jar:3.2.1]
+	at br.com.gubee.interview.Application.main(Application.java:10) [classes/:?]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'jdbcConfiguration' for bean class [br.com.gubee.interview.jdbc.JdbcConfiguration] conflicts with existing, non-compatible bean definition of same name and class [br.com.gubee.interview.web.adapter.in.jdbc.JdbcConfiguration]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:306) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.2.jar:6.1.2]
+	... 13 more
+[INFO ] [2023-12-22T07:01:28,182] [background-preinit] [Version] HV000001: Hibernate Validator 8.0.1.Final 
+[INFO ] [2023-12-22T07:01:28,753] [main] [Application] Starting Application using Java 17.0.6 with PID 6776 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T07:01:28,797] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[WARN ] [2023-12-22T07:01:30,961] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application] 
+[ERROR] [2023-12-22T07:01:32,288] [main] [SpringApplication] Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) [spring-boot-3.2.1.jar:3.2.1]
+	at br.com.gubee.interview.Application.main(Application.java:9) [classes/:?]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'jdbcConfiguration' for bean class [br.com.gubee.interview.jdbc.JdbcConfiguration] conflicts with existing, non-compatible bean definition of same name and class [br.com.gubee.interview.web.adapter.in.jdbc.JdbcConfiguration]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:306) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.2.jar:6.1.2]
+	... 13 more
+[INFO ] [2023-12-22T07:04:29,276] [background-preinit] [Version] HV000001: Hibernate Validator 8.0.1.Final 
+[INFO ] [2023-12-22T07:04:29,752] [main] [Application] Starting Application using Java 17.0.6 with PID 11740 (C:\Users\marcu\Desktop\dg\interview-junior\interview-infra\interview-infra-configuration\target\classes started by marcu in C:\Users\marcu\Desktop\dg\interview-junior) 
+[INFO ] [2023-12-22T07:04:29,777] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[WARN ] [2023-12-22T07:04:31,497] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application] 
+[ERROR] [2023-12-22T07:04:32,934] [main] [SpringApplication] Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.gubee.interview.Application]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) [spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) [spring-boot-3.2.1.jar:3.2.1]
+	at br.com.gubee.interview.Application.main(Application.java:9) [classes/:?]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'jdbcConfiguration' for bean class [br.com.gubee.interview.web.adapter.in.jdbc.JdbcConfiguration] conflicts with existing, non-compatible bean definition of same name and class [br.com.gubee.interview.jdbc.JdbcConfiguration]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:306) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.2.jar:6.1.2]
+	... 13 more

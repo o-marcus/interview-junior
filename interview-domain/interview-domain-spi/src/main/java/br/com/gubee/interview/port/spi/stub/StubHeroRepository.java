@@ -3,16 +3,16 @@ package br.com.gubee.interview.port.spi.stub;
 import br.com.gubee.interview.enums.Race;
 import br.com.gubee.interview.model.Hero;
 import br.com.gubee.interview.model.PowerStats;
+import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
 import br.com.gubee.interview.port.spi.hero.HeroRepository;
 import br.com.gubee.interview.port.spi.entities.HeroPowerStats;
-
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-public class StubHeroRepository implements HeroRepository {
+public class StubHeroRepository implements HeroRepository, GetPowerStatsHeroPort {
 
     private final List<Hero> heroes = new ArrayList<>();
     private final StubPowerStatsRepository stubStats;

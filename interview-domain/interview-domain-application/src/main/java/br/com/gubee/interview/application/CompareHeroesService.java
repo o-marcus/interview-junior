@@ -5,10 +5,10 @@ import br.com.gubee.interview.model.CompareHero;
 import br.com.gubee.interview.port.api.CompareHeroesUseCase;
 import br.com.gubee.interview.port.spi.comparehero.GetPowerStatsHeroPort;
 import br.com.gubee.interview.port.spi.entities.HeroPowerStats;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @UseCase
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CompareHeroesService implements CompareHeroesUseCase {
 
     private final GetPowerStatsHeroPort port;
