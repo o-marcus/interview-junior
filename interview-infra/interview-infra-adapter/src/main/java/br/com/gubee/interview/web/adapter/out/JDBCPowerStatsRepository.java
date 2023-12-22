@@ -1,5 +1,6 @@
 package br.com.gubee.interview.web.adapter.out;
 
+import br.com.gubee.interview.hexarchitecture.PersistenceAdapter;
 import br.com.gubee.interview.port.spi.powerstats.PowerStatsRepository;
 import br.com.gubee.interview.web.adapter.out.exception.NotFoundException;
 import br.com.gubee.interview.model.PowerStats;
@@ -12,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+
+@PersistenceAdapter
 @AllArgsConstructor
 public class JDBCPowerStatsRepository implements PowerStatsRepository {
 

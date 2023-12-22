@@ -4,12 +4,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.7</version>
+        <version>3.2.1</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>gubee</groupId>
-    <artifactId>interview</artifactId>
+    <artifactId>interview-junior</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
@@ -32,18 +32,19 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <jaxb.version>2.3.1</jaxb.version>
         <disruptor.version>3.4.2</disruptor.version>
-        <testcontainer.version>1.16.3</testcontainer.version>
+        <testcontainer.version>1.19.3</testcontainer.version>
     </properties>
 
     <modules>
         <module>interview-infra</module>
         <module>interview-domain</module>
-        <module>interview-infra/interview-infra-adapter</module>
+        <module>interview-commom</module>
+        <module>interview-infra/interview-infra-persistence</module>
     </modules>
 
     <dependencyManagement>

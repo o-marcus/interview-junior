@@ -9,18 +9,6 @@ import java.time.Instant;
 import java.util.UUID;
 import static lombok.AccessLevel.PRIVATE;
 
-//
-//  dizem que adicionar anotações é contra as regras, então usei um atalho que o próprio livro ensinou declarando as anotações direto nos elementos.
-
-/*
-*
-*   Aqui estou seguindo o modelo de domínio anêmico,
-* pois nenhuma validação está sendo realizada.
-*
-*   Apesar de algumas bibliografias serem bem restritas com relação a anotações,
-* aqui usei um atalho ensinado no livro, que se baseia em declrarar ano./
-*
-* */
 @Data
 @Builder
 @AllArgsConstructor

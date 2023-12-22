@@ -1,13 +1,13 @@
 package br.com.gubee.interview.web.adapter.in.hero.resources;
 
 import br.com.gubee.interview.enums.Race;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.UUID;
 import static lombok.AccessLevel.PRIVATE;
 

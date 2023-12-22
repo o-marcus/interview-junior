@@ -7,6 +7,7 @@ import br.com.gubee.interview.web.adapter.in.hero.resources.HeroRequest;
 import br.com.gubee.interview.web.adapter.in.hero.resources.HeroResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import java.net.URI;

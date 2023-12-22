@@ -1,6 +1,6 @@
 package br.com.gubee.interview.web.adapter.in.comparehero;
 
-import br.com.gubee.interview.model.Hero;
+import br.com.gubee.interview.hexarchitecture.WebAdapter;
 import br.com.gubee.interview.port.api.CompareHeroesUseCase;
 import br.com.gubee.interview.web.adapter.in.comparehero.resources.CompareHeroesResponse;
 import br.com.gubee.interview.web.adapter.in.comparehero.resources.CompareMapper;

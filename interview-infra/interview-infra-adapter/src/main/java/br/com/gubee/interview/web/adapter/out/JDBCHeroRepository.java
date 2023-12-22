@@ -1,9 +1,10 @@
 package br.com.gubee.interview.web.adapter.out;
 
+import br.com.gubee.interview.hexarchitecture.PersistenceAdapter;
 import br.com.gubee.interview.port.spi.entities.HeroPowerStats;
+import br.com.gubee.interview.port.spi.hero.HeroRepository;
 import br.com.gubee.interview.web.adapter.out.exception.NotFoundException;
 import br.com.gubee.interview.model.Hero;
-import br.com.gubee.interview.port.spi.hero.HeroRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+@PersistenceAdapter
 @AllArgsConstructor
 public class JDBCHeroRepository implements HeroRepository {
 

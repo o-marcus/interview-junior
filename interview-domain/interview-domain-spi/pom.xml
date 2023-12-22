@@ -9,7 +9,6 @@
 
     <artifactId>interview-domain-spi</artifactId>
     <packaging>jar</packaging>
-
     <name>interview-domain-spi</name>
     <url>http://maven.apache.org</url>
 
@@ -18,12 +17,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>gubee</groupId>
             <artifactId>interview-domain-model</artifactId>
